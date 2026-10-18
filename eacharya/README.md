@@ -322,3 +322,8 @@ Starter activities are illustrative, not formally curriculum-approved. See `BUIL
 
 **Tests:** `npx vitest run` (296 tests; 39 new for moderation) and `supabase/tests/forum_moderation_rls_checks.sql` (33 checks, passed on local PostgreSQL 16 with a stand-in auth schema; **not run on real Supabase**).
 
+
+
+## Phase 6.2: teacher video manager
+
+Sign in as a teacher, open **Videos**, pick a chapter and paste one or more YouTube links. Titles are fetched automatically (server needs outbound access to youtube.com); edit if needed, then **Add videos**. No migration required. Videos can only be added while the course is a draft.

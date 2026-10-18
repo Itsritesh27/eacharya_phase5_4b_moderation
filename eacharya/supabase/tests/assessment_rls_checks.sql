@@ -1,6 +1,6 @@
 -- Task 3.1 assessment security checks (RLS, privileges, constraints, triggers).
 --
--- Run AFTER migrations 1-4 (needs no seed data; it creates its own users, courses
+-- Run AFTER migrations 1-4 (works with or without seed.sql; it creates its own users, courses
 -- and assessments). Paste into the Supabase SQL editor or run with psql.
 -- Everything happens in one transaction that is ROLLED BACK, so nothing is kept.
 -- Any failed check raises an exception; if the script finishes, all checks passed.
@@ -59,6 +59,11 @@ end $$;
 -- ---------------------------------------------------------------
 -- Fixtures (as the database owner)
 -- ---------------------------------------------------------------
+-- TEST-1 fix: ignore seed data. The checks below count ALL rows the actor can see,
+-- so the seeded '[Sample]' quiz would make them off by one. Remove it INSIDE this
+-- transaction only; the final ROLLBACK brings it back, so your seed is untouched.
+delete from public.assessments where title like '[Sample]%';
+
 insert into auth.users (id, instance_id, aud, role, email, raw_user_meta_data) values
   ('00000000-0000-0000-0000-0000000000c1', '00000000-0000-0000-0000-000000000000', 'authenticated', 'authenticated', 't1@test.local', '{}'),
   ('00000000-0000-0000-0000-0000000000c2', '00000000-0000-0000-0000-000000000000', 'authenticated', 'authenticated', 't2@test.local', '{}'),

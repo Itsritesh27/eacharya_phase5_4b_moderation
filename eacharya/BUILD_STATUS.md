@@ -1,5 +1,164 @@
 # eAcharya build status
 
+> **How to read this file.** The Phase 6.1 audit below is the current status. Every section after it was written per phase,
+> is not in order, and was **not re-verified** by the audit (see "Documentation drift").
+
+## Phase 6.1 — Full project audit and role permissions (AUDIT ONLY; no application code, SQL or config was changed by the audit)
+
+**Date:** 2026-10-17 (re-verified 2026-10-18, see section 1). **Method:** static review of `eacharya_phase5_4b_moderation.zip` (8 migrations, 6 SQL check scripts, 5 server-action
+files, 40 routes, 27 test files). The first pass had no Supabase project, PostgreSQL, browser or deployment; the re-run added Node and a local PostgreSQL, but still no live Supabase, browser or deployment. Nothing was applied, no data
+was touched, no service-role key exists in `src/` (searched) or was added.
+
+### 1. What was actually run (and what failed)
+
+The first pass of this audit was a static review in an environment with no registry, PostgreSQL or browser. It was **re-verified on
+2026-10-18 in a networked sandbox** (Node, npm, PostgreSQL 16.15 with a small stand-in for Supabase's `auth`/`storage` schemas). The source
+in the uploaded `eacharya_phase5_4b_moderation.zip` is byte-identical to the tree that was checked.
+
+| Check | Result | Notes |
+|---|---|---|
+| `npm ci` | OK | |
+| `npm run typecheck` (TypeScript 5.9) | **Clean, 0 errors** | The earlier "3,789 errors" came from a global `tsc` 6.x with no packages installed: environment, not code |
+| `npm run lint` | **Clean, 0 errors, 0 warnings** | |
+| `npx vitest run` | **30 files, 435 tests, all pass** (after the Phase 6.2 test batch; 27 files / 296 before) | The earlier count of 293 `it/test` calls is parameterised cases |
+| `npm run build` with the real font import | **Fails**: `next/font` cannot download Plus Jakarta Sans | **Environment** (sandbox has no access to fonts.googleapis.com). Not a code defect; Netlify has network access |
+| `npm run build` with the font import temporarily stubbed (reverted) | **Compiles, type-checks, generates all routes** incl. `/forum/*` and `/dashboard/admin/forum-reports` | Run with dummy Supabase values, so no live data paths ran |
+| `npm audit --omit=dev` | **2 findings (1 high, 1 moderate)**, both PostCSS bundled inside `next` | See SEC-13 |
+| Migrations 1-8 on a fresh local PostgreSQL 16 | **All apply in order, no errors** | Local stand-in only, **not Supabase** |
+| `rls_checks.sql` | 19 PASS **only after `seed.sql`** (5 PASS then a false FAIL without it) | See TEST-1 |
+| `assessment_rls_checks.sql` | 85 PASS on an **empty** database; **fails** (66 PASS, then "expected 1 rows, got 2") after `seed.sql` | See TEST-1: precondition fragility, not an application defect |
+| `forum_rls_checks.sql` / `forum53` / `forum_reports` / `forum_moderation` | 42 / 23 / 22 / 33 PASS, with or without the seed | |
+| Structural queries on the fresh database | Every `public` table has RLS enabled; `anon` can read only `classes`, `subjects`, `courses`, `units`, `lessons` (published/active rows); `authenticated` has no table-level DELETE/TRUNCATE; policies and grants quoted in sections 2 and 5 were confirmed (SEC-1, 2, 3, 5, 6) | |
+| Live Supabase (real JWTs, PostgREST embedded selects, Auth emails, Storage), browser, mobile, screen reader, Netlify deployment | **Not performed** | Still the biggest gap |
+
+**New findings from the re-run**
+
+- **TEST-1 (test setup, Low).** The two oldest SQL scripts have opposite preconditions: `rls_checks.sql` needs `seed.sql`, while
+  `assessment_rls_checks.sql` counts total rows and so needs an empty database. Run in the documented order on one database they cannot
+  both pass. Fix: make the assessment counts ignore seeded rows (filter on the script's own ids) and give each script a "needs seed: yes/no"
+  header. Not an application bug.
+- **SEC-13 (Low-Med, dependency).** `npm audit` reports a high and a moderate PostCSS advisory (CSS stringify XSS and `sourceMappingURL`
+  file read) through the copy of PostCSS inside `next`. The app only processes its own CSS at build time, so exposure is low, but the advised
+  fix is a major upgrade (`next@16`). Recommend first trying the newest Next 15.5.x patch release, then planning the major upgrade deliberately.
+- **DOC-1.** `supabase/proposed/phase5_1_forum_PROPOSAL.sql` is stale (superseded by migration 5) and should be removed so the proposed
+  folder holds only live proposals.
+- **BUILD-1.** Netlify's earlier failure was the unescaped apostrophe in `geography-lab/sections.tsx`; it is fixed in the Phase 5.3 and later
+  sources (lint is clean). A normal `next build` on Netlify has **not** been confirmed since: redeploy and record the result.
+
+### 2. Role model (from code and SQL)
+
+Roles: `student`, `teacher`, `admin` only (`user_role` enum). No new role was invented.
+- Sign-up always yields `student` (trigger ignores metadata; Zod strips a forged `role`). The `role` column is **not** grantable to
+  `authenticated`; it changes only through `admin_set_user_role()` (admin only, never self), backed by a guard trigger.
+- Role is read from `profiles` on every request via `auth.getUser()` (not from a cookie or JWT claim), so a demotion applies at once.
+- `requireRole` is strict equality: a teacher cannot open admin pages and an admin cannot open teacher/student dashboards, even
+  though RLS gives admins wider database rights than any screen exposes. Middleware only checks "signed in" for `/dashboard/*`.
+
+**Routes**
+
+| Audience | Routes (guard) |
+|---|---|
+| Public | `/`, `/about`, `/contact`, `/privacy`, `/terms`, `/courses`, `/courses/[slug]`, `/sign-in`, `/sign-up`, `/auth/*`, `/geography-lab` (+ `map-explorer`, `thematic-map-studio`, `practicals`, `practicals/[id]`; role only changes a panel and enables browser-only drafts) |
+| Any signed-in role (`requireSession`) | `/forum`, `/forum/new`, `/forum/[id]`, `/forum/bookmarks`, `/tutorials`, `/tutorials/[lessonId]`, `/resources`, `/resources/[id]` (data still gated by RLS) |
+| Student only | `/dashboard/student` and `/courses`, `/resources`, `/assessments`, `/assessments/[id]`, `/bookmarks`, `/profile` |
+| Teacher only | `/dashboard/teacher`, `/assessments`, `/assessments/new`, `/assessments/[id]` |
+| Admin only | `/dashboard/admin` (user list, role change), `/dashboard/admin/forum-reports` |
+
+**Permitted / restricted by role** (all rows are enforced by RLS or a DB function; UI hiding is never the control)
+
+| | Student | Teacher | Admin |
+|---|---|---|---|
+| Permitted | Edit own display name; enrol/leave published courses; own progress, notes, bookmarks; read published resources via 5-minute signed URLs; read published assessments of enrolled courses (question text only inside the open window); forum post/reply/edit own/delete own (discussion only while it has no replies)/like/bookmark/report others | Everything a student can in the forum (posts like a student); on **own** courses (`created_by`): units and lessons while the course is draft, lesson content, draft resources, create/edit/delete draft assessments and questions, publish/unpublish own assessments, read own answer keys (builder only) | Read all profiles (no emails); change **other** users' roles; moderate forum reports (status, hide, restore); RLS rights to manage curriculum, resources, assessments (question content only while draft), delete any forum item |
+| Restricted | No writes to courses, lessons, resources, assessments, questions, keys; cannot read others' notes, progress, enrolments, likes, bookmarks or reports; cannot see hidden posts of others; cannot change roles | Cannot publish courses or resources (admin only); no admin pages; cannot see reports; other teachers' assessments and keys invisible; cannot change roles | Cannot change own role; resolved reports are final; published question content is locked even for admins; builder UI is teacher-only (`role === "teacher"`), so admins have no screen for it |
+
+**Server-side authorisation.** All five action files (`auth`, `learning`, `assessments`, `forum`, `forum/moderation`) validate input with Zod,
+take the user from `auth.getUser()`, and use the user's own session (publishable key), so RLS always applies. Extra checks:
+assessments (role `teacher` + course ownership), moderation (role `admin` + DB function re-check), role change (`requireRole("admin")`
++ DB function). Forum and learning actions rely on RLS plus `.eq(author_id|user_id)`. No action relies on hidden buttons.
+
+### 3. Feature status
+
+"Tested" = automated tests exist in the repo and **pass in the 2026-10-18 re-run** (unit tests under vitest, SQL scripts on a local PostgreSQL stand-in); **none was verified against live Supabase or a browser.**
+
+| Area | Status | Notes |
+|---|---|---|
+| Role model, profile protection, curriculum RLS (migrations 1–2) | Implemented and tested | `rls_checks.sql` (19), `roles.test.ts`; local-PostgreSQL stand-in only |
+| Auth: sign-up/in/out, verify, forgot/reset, safe redirect | Implemented, not fully verified | Zod, role and redirect unit tests; email flows and redirect allowlist need live Auth. `auth/actions.ts` has no tests |
+| Public site, About/Contact/Privacy/Terms | Implemented, not fully verified | Contact, Privacy, Terms are draft placeholder text |
+| Admin user list and role change | Implemented, not fully verified | No test for `setUserRoleAction`; see SEC-10 |
+| Courses, enrolment, e-Tutorials (player, progress, notes, bookmarks), e-Content, signed URLs, profile | Implemented, not fully verified | Pure-logic tests only; `learning/actions.ts` and storage policies untested |
+| Teacher/admin authoring (create course, Students, Submissions, Platform Settings, Security) | Missing | These nav items are disabled placeholders; course and chapter creation is still SQL |
+| Teacher video manager (Phase 6.2): paste YouTube links, titles auto-fetched, add many per chapter | Code complete, not verified | Pure link-parsing tests only; `teacher-videos/actions.ts` untested; needs a live Supabase and outbound access to youtube.com. No migration. See section "Phase 6.2 video manager" |
+| Assessment database (3.1) | Implemented and tested | 85 documented SQL checks; application unverified |
+| Teacher assessment builder (3.2) | Implemented, not fully verified | Validation and publish unit tests; `assessments/actions.ts` untested; multi-step writes are not transactional |
+| Student assessment list and instructions (3.3, read-only) | Partially implemented | Start button disabled by design |
+| Attempts, exam UI, answer saving, submit, scoring, results, analytics (3.3–3.6) | Missing, blocked | Only `supabase/proposed/*` SQL exists, untested, not applied, awaiting approval |
+| Geography Lab dashboard, Map Explorer, Thematic Map Studio (4.1–4.3) | Implemented, not fully verified | Coordinate, catalogue, classify, CSV and series tests; earlier note says headless Chromium only; OSM public tiles are for light use |
+| Practical activities workspace and calculators (4.4) | Partially implemented | Drafts are browser-only (localStorage). Server drafts, submission, evidence upload, teacher review: Missing, blocked on proposal |
+| Forum list and page (5.1) | Implemented, not fully verified | Needs forum tables from migration 5 |
+| Discussions, replies, delete rule (5.2) | Implemented, **blocked by unapplied migration 5** | 42 SQL checks, 43+ unit tests documented |
+| Likes, bookmarks, search, sort (5.3) | Implemented, **blocked by unapplied migration 6** | List reads `like_count`: migration must precede deploy |
+| Reporting (5.4A) | Implemented, **blocked by unapplied migration 7** | Native `<dialog>` never run in a browser |
+| Moderation (5.4B) | Implemented, **blocked by unapplied migration 8** | Embedded `discussions(...)`/`discussion_replies(...)` selects and admin `profiles` reads never run under real JWTs |
+| Automated tests overall | Partial (435 unit tests pass; 6 SQL scripts pass locally) | 30 unit-test files; action tests now exist for auth, learning and assessments; still no component or e2e tests |
+
+### 4. Migration status (no database access: applied state **unverified** for all eight)
+
+| # | File | Documented state | Evidence in repo |
+|---|---|---|---|
+| 1–2 | initial schema, auth and RLS | not stated | none |
+| 3 | phase 2 learning (+ `resources` bucket) | not stated | none |
+| 4 | phase 3 assessments | "apply migration 4" listed as outstanding | none |
+| 5–8 | forum, likes/search, reports, moderation | **NOT applied** (README and this file) | none either way |
+
+Order matters (8 needs 7, 6 needs 5; 5–8 need `is_admin`, `set_updated_at`). Rollbacks exist for 4–8 only (none for 1–3). Five
+`supabase/proposed/*.sql` files are not migrations. Nothing was applied by this audit.
+
+### 5. Security findings (code and SQL review; none confirmed on a live project)
+
+| ID | Severity | Finding | Recommended fix |
+|---|---|---|---|
+| SEC-1 | Medium | `questions`/`question_options` are readable by any enrolled student through the API during the open window, with no attempt record, so the timer, attempt limit and one-attempt rules cannot be enforced (answer keys are **not** exposed). The disabled Start button is not a control | Do not open exams to students until the attempts migration (RPC delivery) is approved; consider removing the direct student policies then |
+| SEC-2 | Medium | An author can edit or delete reported content before a moderator acts, and can delete a reply **after** it was hidden. Reports store no content snapshot, so evidence and "restore" are lost | Additive migration: block author delete/edit while a report is pending or the item is hidden, or snapshot text at report time |
+| SEC-3 | Medium | No audit log for role changes. `forum_report_events` cascades away if the reporter's account is deleted | Log role changes inside `admin_set_user_role`; keep events (FK `set null`) |
+| SEC-4 | Low–Med | No `Content-Security-Policy` (other headers present); HSTS depends on the host | Add CSP (YouTube `frame-src`, OSM tiles, Supabase `connect-src`) |
+| SEC-5 | Low | All teachers can read hidden forum posts, while moderation is admin-only | Product decision; restrict policy to author and admin if unintended |
+| SEC-6 | Low | Enrolment policy has no role check; a teacher or admin enrolled in another teacher's published course gains student read access (code comment in `assessments/data.ts` acknowledges it) | Restrict insert to students, or accept |
+| SEC-7 | Low | Storage read policy for published resources ignores course status; `resources.storage_path` need not be in the uploader's folder, so an admin could publish a pointer to someone else's file | Check path prefix and course status |
+| SEC-8 | Low | `siteOrigin()` falls back to Host headers if `NEXT_PUBLIC_SITE_URL` is unset | Set it in production; restrict Supabase redirect URLs |
+| SEC-9 | Low | No app-level rate limits (posts, replies, reports, likes, enrolment); sign-in relies on Supabase Auth limits | Add limits before public launch |
+| SEC-10 | Low | Admin Users table stops at 100 rows with no search; `setUserRoleAction` ignores the RPC error (silent failure); two admins could demote each other (no last-admin guard) | Pagination, show errors, DB guard |
+| SEC-11 | Info | Teachers may unpublish and edit a published assessment. Safe only while no attempts exist | Lock once attempts exist (already planned) |
+| SEC-12 | Config | Unverified: Auth redirect allowlist, email confirmation, password rules, `resources` bucket exists and is private, RLS enabled on live tables | Check on the Supabase dashboard |
+
+Reviewed and found sound: no service-role key in `src/`; `.env.example` has only the publishable key and `.gitignore` covers env files;
+no `dangerouslySetInnerHTML`/`eval`; user id and role never come from the request; users can update only `full_name` and
+`avatar_url`; every `SECURITY DEFINER` function pins `search_path` (counted per migration) and is revoked from `public`/`anon`
+except intended helpers; like counters are not user-writable; forum links are https-only; `safeNext` blocks open redirects;
+answer keys sit in staff-only tables; `anon` has no privileges on any table added after migration 2.
+
+### 6. Documentation drift
+
+"Known gaps" below still says Geography Lab, Forum and Assessments are "Soon" placeholders (no longer true); the line
+"Last updated: Phase 3, Task 3.2 … NOT yet type-checked" is stale; Phase 3.2/3.3/4.1/4.2/4.4 sections record checks as "not run" and
+were never marked superseded; Phase 5.2 cites "45" SQL checks but the script has 42; sections are out of order; the zip also contains
+`tsconfig.tsbuildinfo` and `next-env.d.ts`, which `.gitignore` excludes.
+
+### 7. Recommended order of fixes (not started)
+
+1. On a **scratch** Supabase project apply migrations 1–8 in order, run the six `supabase/tests/*.sql` scripts (see TEST-1 for the seed rule), and record the output here.
+2. (Done in a sandbox, 2026-10-18: `npm ci`, typecheck, lint, tests pass.) Redeploy on Netlify and record the real `next build` result (BUILD-1).
+3. Exercise the untested live paths: embedded selects on `forum_reports`, admin reads of `profiles`, signed URLs, sign-up and reset emails.
+4. Fix SEC-2, SEC-3, SEC-4; decide SEC-1, SEC-5, SEC-6 before attempts or any real students.
+5. Add tests for `auth`, `learning` and `assessments` actions; then SEC-7 to SEC-10.
+
+## Phase 6.2 — Tests for previously untested server actions (tests only; no application code changed)
+
+- **Added:** `src/lib/auth/actions.test.ts` (27), `src/lib/learning/actions.test.ts` (36), `src/lib/assessments/actions.test.ts` (76). Total now 30 files / 435 tests; typecheck and lint clean.
+- **What they pin down:** role changes need `requireRole("admin")`, ignore self-change and invalid input, and go only through `admin_set_user_role`; sign-up never sends a role (forged `role` stripped); sign-in/forgot/reset messages do not leak account existence or provider errors; enrol/progress/bookmark/note/profile actions use the session user id and write only granted columns; the assessment builder refuses student, admin, unknown-role, no-profile and signed-out callers on all 8 actions, hides other teachers' assessments as "not found", locks published assessments, checks course ownership on create and sets `created_by`/`status` server-side.
+- **Limits:** the Supabase client is a fake, so these prove the application logic, not RLS (that is covered by the SQL scripts, run against a local stand-in, not live Supabase). SEC-10 (role-change RPC error silently ignored) is documented by the code but not changed.
+- **Decisions recorded (nothing implemented):** SEC-2 approach chosen = **lock while reported or hidden** (authors cannot edit/delete a post or reply while it has an open report or is hidden), to be done as an additive migration 9 — **not yet written**. Not selected this round: hygiene fixes (TEST-1, DOC-1, SEC-10, SEC-13), migration 9 (SEC-2/SEC-3), CSP header (SEC-4). SEC-1, SEC-5, SEC-6 remain open product decisions.
+
 ## Phase 5.4B — Forum moderation: CODE COMPLETE, migration NOT applied
 - **Moderators:** admins only (existing strict role model; no new role). One SQL function, `can_moderate_forum()`, plus `FORUM_MODERATOR_ROLES`, to widen later.
 - **New:** `supabase/migrations/20261021000001_phase5_4b_forum_moderation.sql`, rollback, `supabase/tests/forum_moderation_rls_checks.sql`; `src/lib/forum/{moderation,moderation-data,moderation-actions}.ts` (+tests); `src/components/forum/{moderation-sections,report-actions}.tsx`; route `src/app/dashboard/admin/forum-reports/{page,loading,error}.tsx`.
@@ -204,3 +363,18 @@ The build needs Google Fonts reachable (or `NEXT_FONT_GOOGLE_MOCKED_RESPONSES` i
 - **Built:** `/forum` (signed-in only, server-checked via `requireSession`, inside `DashboardShell` like `/tutorials`): heading, GET search, class 9-12 filters, six topic categories, Recent discussions with an honest empty state, `loading.tsx`, `error.tsx`. "Popular discussions" is omitted (no activity data). No thread or "new discussion" links exist (no pages). Nav: "Discussion Forum" now links to `/forum` for student, teacher and admin; student dashboard quick link enabled.
 - **New files:** `src/lib/forum/categories.ts` (+test), `src/components/forum/forum-sections.tsx`, `src/app/forum/{page,loading,error}.tsx`, `supabase/proposed/phase5_1_forum_PROPOSAL.sql` (UNTESTED, not applied). **Modified:** `nav-config.ts`, `src/app/dashboard/student/page.tsx`.
 - **Not verified:** typecheck, lint, vitest, build (no dependencies in sandbox).
+
+
+## Phase 6.2 video manager: CODE COMPLETE, NOT VERIFIED
+
+Teacher route `/dashboard/teacher/videos` (nav item "Videos"), then `/dashboard/teacher/videos/[unitId]` for one chapter (a `unit`).
+
+- Paste one or many YouTube links (one per line). After a short pause titles are fetched from YouTube's public oEmbed endpoint (no API key) by a server action; the teacher can edit any title, reorder, remove rows, then save once.
+- Each video becomes one `lessons` row (next free `position`) plus one `lesson_content.video_url` row, stored as the canonical `https://www.youtube.com/watch?v=<id>`. Duplicates (same video, any URL form) are skipped. Direct https .mp4/.webm/.ogv links are accepted; their titles are typed by hand (file name suggested).
+- If the title cannot be fetched (private/removed video, YouTube unreachable) the row asks for a typed title; nothing is blocked.
+- Teachers can also rename or remove a video from the chapter page.
+- Security: teacher role required, Zod validation, URLs re-validated server-side with `parseVideoUrl`, the oEmbed request is rebuilt from an 11-character id (fixed host), ownership checked and enforced again by existing RLS, no service-role key.
+- **No migration and no new storage bucket.** Uses existing `lessons` / `lesson_content` policies.
+- **Known limit:** existing RLS lets a teacher change lessons only while the course is `draft`. On a published course the page is read-only and says so. Changing that needs a migration and is not proposed here.
+- Not done: moving existing videos up/down after saving, per-video descriptions/objectives/transcripts, duration auto-fill.
+- Evidence: the pure helpers in `src/lib/teacher-videos/links.ts` were compiled and run standalone in this environment (output matched the cases in `links.test.ts`). `npm install`, `npm run typecheck`, `lint`, `test`, `build` and any live Supabase/browser check were **not** run (no node_modules, no network).
