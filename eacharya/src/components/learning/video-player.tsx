@@ -125,7 +125,6 @@ export function VideoPlayer({
               <a
                 key={q.src}
                 href={`/api/lessons/${lessonId}/download?q=${i}`}
-                download
                 className="inline-flex h-9 items-center rounded-lg bg-brand-600 px-3 font-semibold hover:bg-brand-500"
                 aria-label={`Download ${title} in ${q.label}`}
               >
@@ -222,8 +221,7 @@ export function VideoPlayer({
                 <a
                   key={q.src}
                   href={`/api/lessons/${lessonId}/download?q=${i}`}
-                  download
-                  className="inline-flex h-9 items-center rounded-lg bg-brand-600 px-3 font-semibold hover:bg-brand-500"
+                    className="inline-flex h-9 items-center rounded-lg bg-brand-600 px-3 font-semibold hover:bg-brand-500"
                   aria-label={`Download ${title} in ${q.label}`}
                 >
                   {q.label}
