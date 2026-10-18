@@ -327,3 +327,26 @@ Starter activities are illustrative, not formally curriculum-approved. See `BUIL
 ## Phase 6.2: teacher video manager
 
 Sign in as a teacher, open **Videos**, pick a chapter and paste one or more YouTube links. Titles are fetched automatically (server needs outbound access to youtube.com); edit if needed, then **Add videos**. No migration required. Videos can only be added while the course is a draft.
+
+## Phase 6.3: video quality + student downloads
+
+Run `supabase/migrations/20261022000001_video_qualities.sql` (adds `lesson_content.video_sources` and `allow_download`), then `npm install` (adds `hls.js`).
+
+**Why not YouTube?** YouTube embeds cannot be forced to a quality from outside, and YouTube's terms forbid offering downloads. For lessons where students need to pick a resolution or download, host the files yourself (Supabase Storage, Cloudflare R2, Bunny, S3...) and list them:
+
+```sql
+update public.lesson_content set
+  allow_download = true,
+  video_sources = '[
+    {"label":"1080p","height":1080,"url":"https://cdn.example.com/lesson1-1080.mp4"},
+    {"label":"720p","height":720,"url":"https://cdn.example.com/lesson1-720.mp4"},
+    {"label":"480p","height":480,"url":"https://cdn.example.com/lesson1-480.mp4"}
+  ]'::jsonb
+where lesson_id = '<lesson-uuid>';
+```
+
+- Students see a **Quality** picker (choice is remembered on their device, switching keeps the position and play state, and the player never lowers quality by itself) and a **Download** button per quality.
+- For one adaptive stream instead, put a single `.m3u8` URL in `video_sources`: the player offers **Auto** plus each rendition.
+- Downloads go through `/api/lessons/<id>/download`, which checks enrolment (row-level security) and `allow_download` first, then redirects to the file; no video bytes pass through the app server. Supabase Storage links are saved as files automatically. On other hosts, make sure the file is served with `Content-Disposition: attachment` (or the browser may play it instead of saving it).
+- Encode each quality as H.264 MP4 with `-movflags +faststart` so playback starts fast and seeking works, e.g. `ffmpeg -i in.mp4 -vf scale=-2:720 -c:v libx264 -crf 21 -preset slow -c:a aac -b:a 128k -movflags +faststart out-720.mp4`.
+- Set `allow_download = false` to hide download buttons for a lesson.
