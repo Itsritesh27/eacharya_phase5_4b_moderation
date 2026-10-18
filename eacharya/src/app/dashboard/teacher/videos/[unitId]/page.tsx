@@ -22,7 +22,8 @@ export default async function ChapterVideosPage({ params }: { params: Promise<{ 
   const chapter = await getChapterDetail(unitId, session.userId);
   if (!chapter) notFound();
 
-  const locked = chapter.courseStatus !== "draft";
+  // Teachers can add videos to their own courses whether draft or published.
+  const locked = false;
   const existingKeys = chapter.videos.flatMap((v) => (v.key ? [v.key] : []));
 
   return (
