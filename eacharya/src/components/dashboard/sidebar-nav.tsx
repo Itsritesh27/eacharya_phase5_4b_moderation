@@ -2,18 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  Bookmark, BookOpen, ClipboardList, FilePlus2, Flag, GraduationCap, LayoutDashboard,
-  Library, Map, MessagesSquare, MonitorPlay, Settings, Shield, UserRound, Users,
-  type LucideIcon,
-} from "lucide-react";
 import { cn } from "@/lib/utils/cn";
-import type { NavIconName, NavItem } from "./nav-config";
-
-const ICONS: Record<NavIconName, LucideIcon> = {
-  Bookmark, BookOpen, ClipboardList, FilePlus2, Flag, GraduationCap, LayoutDashboard,
-  Library, Map, MessagesSquare, MonitorPlay, Settings, Shield, UserRound, Users,
-};
+import type { NavItem } from "./nav-config";
 
 export function SidebarNav({ items, onNavigate }: { items: NavItem[]; onNavigate?: () => void }) {
   const pathname = usePathname();
@@ -21,8 +11,7 @@ export function SidebarNav({ items, onNavigate }: { items: NavItem[]; onNavigate
   return (
     <nav aria-label="Dashboard">
       <ul className="space-y-1">
-        {items.map(({ label, icon, href }) => {
-          const Icon = ICONS[icon];
+        {items.map(({ label, icon: Icon, href }) => {
           const base = href ? href.split("#")[0] : undefined;
           const active = base
             ? pathname === base || (base !== "/dashboard/student" && pathname.startsWith(`${base}/`))
