@@ -40,9 +40,9 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
   if (content.allow_download === false) return NextResponse.json({ error: "Downloads are turned off for this lesson" }, { status: 403 });
 
   const source = resolveLessonVideo(content.video_url, content.video_sources);
-  if (!source || source.kind !== "direct") return NextResponse.json({ error: "This video can't be downloaded" }, { status: 404 });
-  const quality = source.qualities[q.data];
-  if (!quality) return NextResponse.json({ error: "Not found" }, { status: 404 });
+  const files = source?.kind === "direct" ? source.qualities : source?.kind === "youtube" ? (source.downloads ?? []) : [];
+  const quality = files[q.data];
+  if (!quality) return NextResponse.json({ error: "This video can't be downloaded" }, { status: 404 });
 
   const lesson = Array.isArray(content.lesson) ? content.lesson[0] : content.lesson;
   const name = fileName((lesson as { title?: string } | null | undefined)?.title ?? "lesson", quality.label, quality.src);

@@ -8,7 +8,8 @@ export interface VideoQuality {
 }
 
 export type VideoSource =
-  | { kind: "youtube"; videoId: string; embedUrl: string; watchUrl: string }
+  /** `downloads`: optional self-hosted files students can save while watching on YouTube. */
+  | { kind: "youtube"; videoId: string; embedUrl: string; watchUrl: string; downloads?: VideoQuality[] }
   /** Direct files. `qualities` is sorted best first; `src`/`mime` mirror qualities[0]. */
   | { kind: "direct"; src: string; mime: string; qualities: VideoQuality[] }
   /** Adaptive HLS stream (.m3u8): the player offers Auto plus each rendition. */
@@ -100,33 +101,43 @@ export function resolveLessonVideo(
   videoUrl: string | null | undefined,
   videoSources: unknown,
 ): VideoSource | null {
-  if (Array.isArray(videoSources) && videoSources.length > 0) {
-    const qualities: VideoQuality[] = [];
-    const seen = new Set<string>();
-    for (const raw of videoSources.slice(0, MAX_QUALITIES)) {
-      if (!raw || typeof raw !== "object") continue;
-      const item = raw as { url?: unknown; label?: unknown; height?: unknown };
-      const parsed = typeof item.url === "string" ? parseVideoUrl(item.url) : null;
-      if (!parsed) continue;
-      if (parsed.kind === "hls") return parsed; // adaptive stream wins; it carries its own renditions
-      if (parsed.kind !== "direct" || seen.has(parsed.src)) continue;
-      seen.add(parsed.src);
-      const height = typeof item.height === "number" && item.height > 0 && item.height <= 4320 ? Math.round(item.height) : 0;
-      const label =
-        typeof item.label === "string" && item.label.trim()
-          ? item.label.trim().slice(0, 12)
-          : height > 0
-            ? `${height}p`
-            : "Original";
-      qualities.push({ label, height, src: parsed.src, mime: parsed.mime });
+  const main = parseVideoUrl(videoUrl);
+  const list = Array.isArray(videoSources) ? videoSources.slice(0, MAX_QUALITIES) : [];
+
+  const qualities: VideoQuality[] = [];
+  let hls: VideoSource | null = null;
+  const seen = new Set<string>();
+  for (const raw of list) {
+    if (!raw || typeof raw !== "object") continue;
+    const item = raw as { url?: unknown; label?: unknown; height?: unknown };
+    const parsed = typeof item.url === "string" ? parseVideoUrl(item.url) : null;
+    if (!parsed) continue;
+    if (parsed.kind === "hls") {
+      hls ??= parsed;
+      continue;
     }
-    if (qualities.length > 0) {
-      qualities.sort((a, b) => b.height - a.height);
-      const best = qualities[0] as VideoQuality;
-      return { kind: "direct", src: best.src, mime: best.mime, qualities };
-    }
+    if (parsed.kind !== "direct" || seen.has(parsed.src)) continue;
+    seen.add(parsed.src);
+    const height = typeof item.height === "number" && item.height > 0 && item.height <= 4320 ? Math.round(item.height) : 0;
+    const label =
+      typeof item.label === "string" && item.label.trim()
+        ? item.label.trim().slice(0, 12)
+        : height > 0
+          ? `${height}p`
+          : "Original";
+    qualities.push({ label, height, src: parsed.src, mime: parsed.mime });
   }
-  return parseVideoUrl(videoUrl);
+  qualities.sort((a, b) => b.height - a.height);
+
+  // A YouTube lesson keeps playing on YouTube; the listed files become download-only.
+  if (main?.kind === "youtube") return qualities.length > 0 ? { ...main, downloads: qualities } : main;
+
+  if (hls) return hls; // adaptive stream wins; it carries its own renditions
+  if (qualities.length > 0) {
+    const best = qualities[0] as VideoQuality;
+    return { kind: "direct", src: best.src, mime: best.mime, qualities };
+  }
+  return main;
 }
 
 /**

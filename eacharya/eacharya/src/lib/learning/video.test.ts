@@ -91,6 +91,14 @@ describe("resolveLessonVideo", () => {
     }
   });
 
+  it("keeps a YouTube lesson on YouTube and offers the files as downloads", () => {
+    const r = resolveLessonVideo("https://youtu.be/dQw4w9WgXcQ", [
+      { url: "https://cdn.example.com/a-720.mp4", height: 720 },
+    ]);
+    expect(r?.kind).toBe("youtube");
+    if (r?.kind === "youtube") expect(r.downloads?.map((d) => d.label)).toEqual(["720p"]);
+  });
+
   it("supports an HLS playlist and falls back to video_url", () => {
     expect(resolveLessonVideo(null, [{ url: "https://cdn.example.com/x/master.m3u8" }])?.kind).toBe("hls");
     expect(resolveLessonVideo("https://youtu.be/dQw4w9WgXcQ", [])?.kind).toBe("youtube");

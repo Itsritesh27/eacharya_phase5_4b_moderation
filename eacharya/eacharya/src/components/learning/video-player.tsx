@@ -160,8 +160,10 @@ export function VideoPlayer({
   }, []);
 
   if (source.kind === "youtube") {
+    const files = allowDownload ? (source.downloads ?? []) : [];
     return (
-      <div className="aspect-video w-full overflow-hidden rounded-card bg-forest-950 shadow-card">
+      <div className="overflow-hidden rounded-card bg-forest-950 shadow-card">
+        <div className="aspect-video w-full">
         <iframe
           title={`${title} (video)`}
           src={`${source.embedUrl}?rel=0&modestbranding=1`}
@@ -172,6 +174,25 @@ export function VideoPlayer({
           allow="encrypted-media; picture-in-picture; fullscreen"
           allowFullScreen
         />
+        </div>
+        {files.length > 0 && (
+          <div className="flex flex-wrap items-center justify-end gap-1.5 bg-forest-900 px-3 py-2 text-sm text-white">
+            <span className="inline-flex items-center gap-1.5 pr-1 font-semibold">
+              <Download className="h-4 w-4" aria-hidden /> Download
+            </span>
+            {files.map((q, i) => (
+              <a
+                key={q.src}
+                href={`/api/lessons/${lessonId}/download?q=${i}`}
+                download
+                className="inline-flex h-9 items-center rounded-lg bg-brand-600 px-3 font-semibold hover:bg-brand-500"
+                aria-label={`Download ${title} in ${q.label}`}
+              >
+                {q.label}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     );
   }
