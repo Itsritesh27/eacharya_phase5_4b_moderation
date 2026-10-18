@@ -243,11 +243,6 @@ async function ownedDraftUnit(ctx: NonNullable<Awaited<ReturnType<typeof teacher
   } | null;
   const course = Array.isArray(row?.course) ? row?.course[0] : row?.course;
   if (!row || !course || course.created_by !== ctx.userId) return NOT_YOURS;
-  if (course.status !== "draft") {
-    return {
-      ok: false as const,
-      error: "This course is published, so its lessons are locked. Ask an administrator to unpublish it to add videos.",
-    };
-  }
+  // Teachers may edit their own course whether it is draft or published.
   return { ok: true as const };
 }

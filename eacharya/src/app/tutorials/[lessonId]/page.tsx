@@ -17,7 +17,7 @@ import { EmptyState } from "@/components/ui/empty-state";
 import { requireSession } from "@/lib/auth/session";
 import { getLessonPageData } from "@/lib/data/learning";
 import { computeCourseProgress } from "@/lib/learning/progress";
-import { parseVideoUrl } from "@/lib/learning/video";
+import { resolveLessonVideo } from "@/lib/learning/video";
 
 export const metadata: Metadata = { title: "Lesson" };
 export const dynamic = "force-dynamic";
@@ -40,7 +40,7 @@ export default async function LessonPage({ params }: { params: Promise<{ lessonI
   const completed = progress?.status === "completed";
   const canTrack = enrolled;
   const hasAccess = enrolled || content !== null; // owners/admins can preview without enrolling
-  const source = parseVideoUrl(content?.video_url);
+  const source = resolveLessonVideo(content?.video_url, content?.video_sources);
 
   return (
     <DashboardShell session={session}>
@@ -99,10 +99,11 @@ export default async function LessonPage({ params }: { params: Promise<{ lessonI
                   lessonId={lesson.id}
                   startAt={progress?.positionSeconds ?? 0}
                   canSave={canTrack}
+                  allowDownload={content?.allow_download !== false}
                 />
               ) : (
                 <div className="flex aspect-video w-full flex-col items-center justify-center rounded-card border border-dashed border-sage-300 bg-sage-50/60 px-6 text-center">
-                  {content?.video_url ? (
+                  {content?.video_url || (Array.isArray(content?.video_sources) && content.video_sources.length > 0) ? (
                     <>
                       <TriangleAlert className="h-8 w-8 text-forest-500" aria-hidden />
                       <p className="mt-3 font-semibold">This video can&apos;t be shown</p>

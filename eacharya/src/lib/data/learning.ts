@@ -247,7 +247,7 @@ export async function getLessonPageData(lessonId: string, userId: string): Promi
       getCompletedLessonIds(userId),
       supabase
         .from("lesson_content")
-        .select("lesson_id, video_url, objectives, transcript, duration_minutes")
+        .select("lesson_id, video_url, video_sources, allow_download, objectives, transcript, duration_minutes")
         .eq("lesson_id", lessonId)
         .maybeSingle(),
       supabase
