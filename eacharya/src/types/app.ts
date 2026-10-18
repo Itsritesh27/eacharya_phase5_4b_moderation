@@ -69,6 +69,8 @@ export type ProgressStatus = "in_progress" | "completed";
 export interface LessonContentRow {
   lesson_id: string;
   video_url: string | null;
+  video_sources: unknown;
+  allow_download: boolean;
   objectives: string[];
   transcript: string | null;
   duration_minutes: number | null;
