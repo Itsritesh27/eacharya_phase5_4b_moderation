@@ -13,7 +13,7 @@ import { MAX_BATCH, MAX_TITLE, extractVideoLinks, youtubeThumbnail } from "@/lib
 interface Row {
   key: string;
   url: string;
-  kind: "youtube" | "direct";
+  kind: "youtube" | "direct" | "hls";
   videoId: string | null;
   title: string;
   author: string | null;
