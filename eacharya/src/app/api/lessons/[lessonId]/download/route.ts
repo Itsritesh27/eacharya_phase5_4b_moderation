@@ -31,21 +31,25 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
   const { data: auth } = await supabase.auth.getUser();
   if (!auth.user) return NextResponse.json({ error: "Please sign in" }, { status: 401 });
 
-  const { data: content } = await supabase
+  const { data: content, error: contentError } = await supabase
     .from("lesson_content")
-    .select("video_url, video_sources, allow_download, lesson:lessons(title)")
+    .select("video_url, video_sources, allow_download")
     .eq("lesson_id", lessonId)
     .maybeSingle();
-  if (!content) return NextResponse.json({ error: "Not found" }, { status: 404 });
+  if (contentError) {
+    console.error("[download] lesson_content query failed:", contentError.message);
+    return NextResponse.json({ error: "Could not load this lesson", step: "query", detail: contentError.message }, { status: 500 });
+  }
+  if (!content) return NextResponse.json({ error: "No access to this lesson's video (are you enrolled?)", step: "access" }, { status: 404 });
   if (content.allow_download === false) return NextResponse.json({ error: "Downloads are turned off for this lesson" }, { status: 403 });
 
   const source = resolveLessonVideo(content.video_url, content.video_sources);
-  if (!source || source.kind !== "direct") return NextResponse.json({ error: "This video can't be downloaded" }, { status: 404 });
-  const quality = source.qualities[q.data];
-  if (!quality) return NextResponse.json({ error: "Not found" }, { status: 404 });
+  const files = source?.kind === "direct" ? source.qualities : source?.kind === "youtube" ? (source.downloads ?? []) : [];
+  const quality = files[q.data];
+  if (!quality) return NextResponse.json({ error: "No downloadable file at this position", step: "quality" }, { status: 404 });
 
-  const lesson = Array.isArray(content.lesson) ? content.lesson[0] : content.lesson;
-  const name = fileName((lesson as { title?: string } | null | undefined)?.title ?? "lesson", quality.label, quality.src);
+  const { data: lesson } = await supabase.from("lessons").select("title").eq("id", lessonId).maybeSingle();
+  const name = fileName(lesson?.title ?? "lesson", quality.label, quality.src);
 
   const target = new URL(quality.src);
   if (target.pathname.includes("/storage/v1/object/")) target.searchParams.set("download", name);
