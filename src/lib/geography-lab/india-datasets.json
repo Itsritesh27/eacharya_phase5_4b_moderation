@@ -1,0 +1,2954 @@
+[
+  {
+    "id": "literacy-sex-2011",
+    "category": "Population & Society",
+    "title": "Literacy by sex",
+    "description": "Compare effective literacy rates for males and females and inspect the percentage-point gap. Useful for a gender literacy gap project.",
+    "period": "Census 2011 (effective literacy, age 7+)",
+    "geography": "States and union territories using 2011 geography",
+    "unit": "Percent; gap in percentage points",
+    "sourceLabel": "Census of India 2011 — Provisional Population Totals",
+    "sourceUrl": "https://censusindia.gov.in/nada/index.php/catalog/42611/download/46274/Census%20of%20India%202011-Provisional%20Population%20Totals.pdf",
+    "extraSources": [],
+    "caveat": "Historical Census boundaries are retained: Andhra Pradesh includes Telangana, Jammu and Kashmir is undivided, and the values should not be presented as current rates.",
+    "columns": [
+      {
+        "key": "state_ut",
+        "label": "State / UT"
+      },
+      {
+        "key": "male_literacy_pct",
+        "label": "Male literacy (%)"
+      },
+      {
+        "key": "female_literacy_pct",
+        "label": "Female literacy (%)"
+      },
+      {
+        "key": "total_literacy_pct",
+        "label": "Total literacy (%)"
+      },
+      {
+        "key": "male_female_gap_pp",
+        "label": "Male–female gap (pp)"
+      }
+    ],
+    "rows": [
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "male_literacy_pct": 90.1,
+        "female_literacy_pct": 81.8,
+        "total_literacy_pct": 86.3,
+        "male_female_gap_pp": 8.3
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "male_literacy_pct": 75.6,
+        "female_literacy_pct": 59.7,
+        "total_literacy_pct": 67.7,
+        "male_female_gap_pp": 15.9
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "male_literacy_pct": 73.7,
+        "female_literacy_pct": 59.6,
+        "total_literacy_pct": 67.0,
+        "male_female_gap_pp": 14.1
+      },
+      {
+        "state_ut": "Assam",
+        "male_literacy_pct": 78.8,
+        "female_literacy_pct": 67.3,
+        "total_literacy_pct": 73.2,
+        "male_female_gap_pp": 11.5
+      },
+      {
+        "state_ut": "Bihar",
+        "male_literacy_pct": 73.5,
+        "female_literacy_pct": 53.3,
+        "total_literacy_pct": 63.8,
+        "male_female_gap_pp": 20.2
+      },
+      {
+        "state_ut": "Chandigarh",
+        "male_literacy_pct": 90.5,
+        "female_literacy_pct": 81.4,
+        "total_literacy_pct": 86.4,
+        "male_female_gap_pp": 9.1
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "male_literacy_pct": 81.5,
+        "female_literacy_pct": 60.6,
+        "total_literacy_pct": 71.0,
+        "male_female_gap_pp": 20.9
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli",
+        "male_literacy_pct": 86.5,
+        "female_literacy_pct": 65.9,
+        "total_literacy_pct": 77.7,
+        "male_female_gap_pp": 20.6
+      },
+      {
+        "state_ut": "Daman and Diu",
+        "male_literacy_pct": 91.5,
+        "female_literacy_pct": 79.6,
+        "total_literacy_pct": 87.1,
+        "male_female_gap_pp": 11.9
+      },
+      {
+        "state_ut": "Delhi",
+        "male_literacy_pct": 91.0,
+        "female_literacy_pct": 80.9,
+        "total_literacy_pct": 86.3,
+        "male_female_gap_pp": 10.1
+      },
+      {
+        "state_ut": "Goa",
+        "male_literacy_pct": 92.8,
+        "female_literacy_pct": 81.8,
+        "total_literacy_pct": 87.4,
+        "male_female_gap_pp": 11.0
+      },
+      {
+        "state_ut": "Gujarat",
+        "male_literacy_pct": 87.2,
+        "female_literacy_pct": 70.7,
+        "total_literacy_pct": 79.3,
+        "male_female_gap_pp": 16.5
+      },
+      {
+        "state_ut": "Haryana",
+        "male_literacy_pct": 85.4,
+        "female_literacy_pct": 66.8,
+        "total_literacy_pct": 76.6,
+        "male_female_gap_pp": 18.6
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "male_literacy_pct": 90.8,
+        "female_literacy_pct": 76.6,
+        "total_literacy_pct": 83.8,
+        "male_female_gap_pp": 14.2
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "male_literacy_pct": 78.3,
+        "female_literacy_pct": 58.0,
+        "total_literacy_pct": 68.7,
+        "male_female_gap_pp": 20.3
+      },
+      {
+        "state_ut": "Jharkhand",
+        "male_literacy_pct": 78.5,
+        "female_literacy_pct": 56.2,
+        "total_literacy_pct": 67.6,
+        "male_female_gap_pp": 22.3
+      },
+      {
+        "state_ut": "Karnataka",
+        "male_literacy_pct": 82.8,
+        "female_literacy_pct": 68.1,
+        "total_literacy_pct": 75.6,
+        "male_female_gap_pp": 14.7
+      },
+      {
+        "state_ut": "Kerala",
+        "male_literacy_pct": 96.0,
+        "female_literacy_pct": 92.0,
+        "total_literacy_pct": 93.9,
+        "male_female_gap_pp": 4.0
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "male_literacy_pct": 96.1,
+        "female_literacy_pct": 88.2,
+        "total_literacy_pct": 92.3,
+        "male_female_gap_pp": 7.9
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "male_literacy_pct": 80.5,
+        "female_literacy_pct": 60.0,
+        "total_literacy_pct": 70.6,
+        "male_female_gap_pp": 20.5
+      },
+      {
+        "state_ut": "Maharashtra",
+        "male_literacy_pct": 89.8,
+        "female_literacy_pct": 75.5,
+        "total_literacy_pct": 82.9,
+        "male_female_gap_pp": 14.3
+      },
+      {
+        "state_ut": "Manipur",
+        "male_literacy_pct": 86.5,
+        "female_literacy_pct": 73.2,
+        "total_literacy_pct": 79.8,
+        "male_female_gap_pp": 13.3
+      },
+      {
+        "state_ut": "Meghalaya",
+        "male_literacy_pct": 77.2,
+        "female_literacy_pct": 73.8,
+        "total_literacy_pct": 75.5,
+        "male_female_gap_pp": 3.4
+      },
+      {
+        "state_ut": "Mizoram",
+        "male_literacy_pct": 93.7,
+        "female_literacy_pct": 89.4,
+        "total_literacy_pct": 91.6,
+        "male_female_gap_pp": 4.3
+      },
+      {
+        "state_ut": "Nagaland",
+        "male_literacy_pct": 83.3,
+        "female_literacy_pct": 76.7,
+        "total_literacy_pct": 80.1,
+        "male_female_gap_pp": 6.6
+      },
+      {
+        "state_ut": "Odisha",
+        "male_literacy_pct": 82.4,
+        "female_literacy_pct": 64.4,
+        "total_literacy_pct": 73.5,
+        "male_female_gap_pp": 18.0
+      },
+      {
+        "state_ut": "Puducherry",
+        "male_literacy_pct": 92.1,
+        "female_literacy_pct": 81.2,
+        "total_literacy_pct": 86.5,
+        "male_female_gap_pp": 10.9
+      },
+      {
+        "state_ut": "Punjab",
+        "male_literacy_pct": 81.5,
+        "female_literacy_pct": 71.3,
+        "total_literacy_pct": 76.7,
+        "male_female_gap_pp": 10.2
+      },
+      {
+        "state_ut": "Rajasthan",
+        "male_literacy_pct": 80.5,
+        "female_literacy_pct": 52.7,
+        "total_literacy_pct": 67.1,
+        "male_female_gap_pp": 27.8
+      },
+      {
+        "state_ut": "Sikkim",
+        "male_literacy_pct": 87.3,
+        "female_literacy_pct": 76.4,
+        "total_literacy_pct": 82.2,
+        "male_female_gap_pp": 10.9
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "male_literacy_pct": 86.8,
+        "female_literacy_pct": 73.9,
+        "total_literacy_pct": 80.3,
+        "male_female_gap_pp": 12.9
+      },
+      {
+        "state_ut": "Tripura",
+        "male_literacy_pct": 92.2,
+        "female_literacy_pct": 83.1,
+        "total_literacy_pct": 87.8,
+        "male_female_gap_pp": 9.1
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "male_literacy_pct": 79.2,
+        "female_literacy_pct": 59.3,
+        "total_literacy_pct": 69.7,
+        "male_female_gap_pp": 19.9
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "male_literacy_pct": 88.3,
+        "female_literacy_pct": 70.7,
+        "total_literacy_pct": 79.6,
+        "male_female_gap_pp": 17.6
+      },
+      {
+        "state_ut": "West Bengal",
+        "male_literacy_pct": 82.7,
+        "female_literacy_pct": 71.2,
+        "total_literacy_pct": 77.1,
+        "male_female_gap_pp": 11.5
+      },
+      {
+        "state_ut": "India",
+        "male_literacy_pct": 82.1,
+        "female_literacy_pct": 65.5,
+        "total_literacy_pct": 74.0,
+        "male_female_gap_pp": 16.6
+      }
+    ],
+    "visualKey": "total_literacy_pct",
+    "visualLabel": "Total literacy rate",
+    "visualUnit": "%"
+  },
+  {
+    "id": "sex-ratio-2011",
+    "category": "Population & Society",
+    "title": "Total & child sex ratio",
+    "description": "Compare total sex ratio with child sex ratio (age 0–6), including rural and urban differences.",
+    "period": "Census 2011",
+    "geography": "States and union territories using 2011 geography",
+    "unit": "Females per 1,000 males",
+    "sourceLabel": "MoSPI — Women and Men in India, Chapter 1 tables",
+    "sourceUrl": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/social_statistics/WM17Chapter1.pdf",
+    "extraSources": [],
+    "caveat": "These are 2011 Census measures, not current estimates. Child sex ratio is for ages 0–6. State/UT boundaries use the 2011 vintage.",
+    "columns": [
+      {
+        "key": "state_ut",
+        "label": "State / UT"
+      },
+      {
+        "key": "total_rural",
+        "label": "Total sex ratio — rural"
+      },
+      {
+        "key": "total_urban",
+        "label": "Total sex ratio — urban"
+      },
+      {
+        "key": "total_overall",
+        "label": "Total sex ratio — overall"
+      },
+      {
+        "key": "child_rural_0_6",
+        "label": "Child sex ratio — rural"
+      },
+      {
+        "key": "child_urban_0_6",
+        "label": "Child sex ratio — urban"
+      },
+      {
+        "key": "child_total_0_6",
+        "label": "Child sex ratio — overall"
+      }
+    ],
+    "rows": [
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "total_rural": 877,
+        "total_urban": 874,
+        "total_overall": 876,
+        "child_rural_0_6": 976,
+        "child_urban_0_6": 954,
+        "child_total_0_6": 968
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "total_rural": 996,
+        "total_urban": 987,
+        "total_overall": 993,
+        "child_rural_0_6": 941,
+        "child_urban_0_6": 935,
+        "child_total_0_6": 939
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "total_rural": 953,
+        "total_urban": 890,
+        "total_overall": 938,
+        "child_rural_0_6": 975,
+        "child_urban_0_6": 957,
+        "child_total_0_6": 972
+      },
+      {
+        "state_ut": "Assam",
+        "total_rural": 960,
+        "total_urban": 946,
+        "total_overall": 958,
+        "child_rural_0_6": 964,
+        "child_urban_0_6": 944,
+        "child_total_0_6": 962
+      },
+      {
+        "state_ut": "Bihar",
+        "total_rural": 921,
+        "total_urban": 895,
+        "total_overall": 918,
+        "child_rural_0_6": 938,
+        "child_urban_0_6": 912,
+        "child_total_0_6": 935
+      },
+      {
+        "state_ut": "Chandigarh",
+        "total_rural": 690,
+        "total_urban": 822,
+        "total_overall": 818,
+        "child_rural_0_6": 871,
+        "child_urban_0_6": 880,
+        "child_total_0_6": 880
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "total_rural": 1001,
+        "total_urban": 956,
+        "total_overall": 991,
+        "child_rural_0_6": 977,
+        "child_urban_0_6": 937,
+        "child_total_0_6": 969
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli",
+        "total_rural": 863,
+        "total_urban": 682,
+        "total_overall": 774,
+        "child_rural_0_6": 970,
+        "child_urban_0_6": 872,
+        "child_total_0_6": 926
+      },
+      {
+        "state_ut": "Daman and Diu",
+        "total_rural": 864,
+        "total_urban": 551,
+        "total_overall": 618,
+        "child_rural_0_6": 932,
+        "child_urban_0_6": 894,
+        "child_total_0_6": 904
+      },
+      {
+        "state_ut": "Delhi",
+        "total_rural": 852,
+        "total_urban": 868,
+        "total_overall": 868,
+        "child_rural_0_6": 814,
+        "child_urban_0_6": 873,
+        "child_total_0_6": 871
+      },
+      {
+        "state_ut": "Goa",
+        "total_rural": 1003,
+        "total_urban": 956,
+        "total_overall": 973,
+        "child_rural_0_6": 945,
+        "child_urban_0_6": 940,
+        "child_total_0_6": 942
+      },
+      {
+        "state_ut": "Gujarat",
+        "total_rural": 949,
+        "total_urban": 880,
+        "total_overall": 919,
+        "child_rural_0_6": 914,
+        "child_urban_0_6": 852,
+        "child_total_0_6": 890
+      },
+      {
+        "state_ut": "Haryana",
+        "total_rural": 882,
+        "total_urban": 873,
+        "total_overall": 879,
+        "child_rural_0_6": 835,
+        "child_urban_0_6": 832,
+        "child_total_0_6": 834
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "total_rural": 986,
+        "total_urban": 853,
+        "total_overall": 972,
+        "child_rural_0_6": 912,
+        "child_urban_0_6": 881,
+        "child_total_0_6": 909
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "total_rural": 908,
+        "total_urban": 840,
+        "total_overall": 889,
+        "child_rural_0_6": 865,
+        "child_urban_0_6": 850,
+        "child_total_0_6": 862
+      },
+      {
+        "state_ut": "Jharkhand",
+        "total_rural": 961,
+        "total_urban": 910,
+        "total_overall": 948,
+        "child_rural_0_6": 957,
+        "child_urban_0_6": 908,
+        "child_total_0_6": 948
+      },
+      {
+        "state_ut": "Karnataka",
+        "total_rural": 979,
+        "total_urban": 963,
+        "total_overall": 973,
+        "child_rural_0_6": 950,
+        "child_urban_0_6": 946,
+        "child_total_0_6": 948
+      },
+      {
+        "state_ut": "Kerala",
+        "total_rural": 1078,
+        "total_urban": 1091,
+        "total_overall": 1084,
+        "child_rural_0_6": 965,
+        "child_urban_0_6": 963,
+        "child_total_0_6": 964
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "total_rural": 952,
+        "total_urban": 945,
+        "total_overall": 946,
+        "child_rural_0_6": 911,
+        "child_urban_0_6": 911,
+        "child_total_0_6": 911
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "total_rural": 936,
+        "total_urban": 918,
+        "total_overall": 931,
+        "child_rural_0_6": 923,
+        "child_urban_0_6": 901,
+        "child_total_0_6": 918
+      },
+      {
+        "state_ut": "Maharashtra",
+        "total_rural": 952,
+        "total_urban": 903,
+        "total_overall": 929,
+        "child_rural_0_6": 890,
+        "child_urban_0_6": 899,
+        "child_total_0_6": 894
+      },
+      {
+        "state_ut": "Manipur",
+        "total_rural": 969,
+        "total_urban": 1026,
+        "total_overall": 985,
+        "child_rural_0_6": 931,
+        "child_urban_0_6": 949,
+        "child_total_0_6": 936
+      },
+      {
+        "state_ut": "Meghalaya",
+        "total_rural": 986,
+        "total_urban": 1001,
+        "total_overall": 989,
+        "child_rural_0_6": 972,
+        "child_urban_0_6": 954,
+        "child_total_0_6": 970
+      },
+      {
+        "state_ut": "Mizoram",
+        "total_rural": 952,
+        "total_urban": 998,
+        "total_overall": 976,
+        "child_rural_0_6": 966,
+        "child_urban_0_6": 974,
+        "child_total_0_6": 970
+      },
+      {
+        "state_ut": "Nagaland",
+        "total_rural": 940,
+        "total_urban": 908,
+        "total_overall": 931,
+        "child_rural_0_6": 933,
+        "child_urban_0_6": 973,
+        "child_total_0_6": 943
+      },
+      {
+        "state_ut": "Odisha",
+        "total_rural": 989,
+        "total_urban": 932,
+        "total_overall": 979,
+        "child_rural_0_6": 946,
+        "child_urban_0_6": 913,
+        "child_total_0_6": 941
+      },
+      {
+        "state_ut": "Puducherry",
+        "total_rural": 1028,
+        "total_urban": 1042,
+        "total_overall": 1037,
+        "child_rural_0_6": 953,
+        "child_urban_0_6": 975,
+        "child_total_0_6": 967
+      },
+      {
+        "state_ut": "Punjab",
+        "total_rural": 907,
+        "total_urban": 875,
+        "total_overall": 895,
+        "child_rural_0_6": 844,
+        "child_urban_0_6": 852,
+        "child_total_0_6": 846
+      },
+      {
+        "state_ut": "Rajasthan",
+        "total_rural": 933,
+        "total_urban": 914,
+        "total_overall": 928,
+        "child_rural_0_6": 892,
+        "child_urban_0_6": 874,
+        "child_total_0_6": 888
+      },
+      {
+        "state_ut": "Sikkim",
+        "total_rural": 882,
+        "total_urban": 913,
+        "total_overall": 890,
+        "child_rural_0_6": 964,
+        "child_urban_0_6": 934,
+        "child_total_0_6": 957
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "total_rural": 993,
+        "total_urban": 1000,
+        "total_overall": 996,
+        "child_rural_0_6": 936,
+        "child_urban_0_6": 952,
+        "child_total_0_6": 943
+      },
+      {
+        "state_ut": "Tripura",
+        "total_rural": 955,
+        "total_urban": 973,
+        "total_overall": 960,
+        "child_rural_0_6": 960,
+        "child_urban_0_6": 947,
+        "child_total_0_6": 957
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "total_rural": 918,
+        "total_urban": 894,
+        "total_overall": 912,
+        "child_rural_0_6": 906,
+        "child_urban_0_6": 885,
+        "child_total_0_6": 902
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "total_rural": 1000,
+        "total_urban": 884,
+        "total_overall": 963,
+        "child_rural_0_6": 899,
+        "child_urban_0_6": 868,
+        "child_total_0_6": 890
+      },
+      {
+        "state_ut": "West Bengal",
+        "total_rural": 953,
+        "total_urban": 944,
+        "total_overall": 950,
+        "child_rural_0_6": 959,
+        "child_urban_0_6": 947,
+        "child_total_0_6": 956
+      },
+      {
+        "state_ut": "India",
+        "total_rural": 949,
+        "total_urban": 929,
+        "total_overall": 943,
+        "child_rural_0_6": 923,
+        "child_urban_0_6": 905,
+        "child_total_0_6": 918
+      }
+    ],
+    "visualKey": "total_overall",
+    "visualLabel": "Overall total sex ratio",
+    "visualUnit": "females / 1,000 males"
+  },
+  {
+    "id": "urbanisation-trend",
+    "category": "Infrastructure & Development",
+    "title": "Urban population trend",
+    "description": "Track how the urban share of population changed from 1991 to 2011.",
+    "period": "Census 1991, 2001 and 2011",
+    "geography": "States and union territories using published historical geography",
+    "unit": "Percent of total population; change in percentage points",
+    "sourceLabel": "MoSPI — Selected Socio-Economic Statistics India",
+    "sourceUrl": "https://mospi.gov.in/sites/default/files/publication_reports/SelectedSocio-EconomicStatisticsIndia2017_27oct17.pdf",
+    "extraSources": [],
+    "caveat": "Use as a historical trend, not a current urbanisation estimate. Census boundaries and state names differ from today.",
+    "columns": [
+      {
+        "key": "state_ut",
+        "label": "State / UT"
+      },
+      {
+        "key": "urban_pct_1991",
+        "label": "Urban population 1991 (%)"
+      },
+      {
+        "key": "urban_pct_2001",
+        "label": "Urban population 2001 (%)"
+      },
+      {
+        "key": "urban_pct_2011",
+        "label": "Urban population 2011 (%)"
+      },
+      {
+        "key": "change_1991_2011_pp",
+        "label": "Change 1991–2011 (pp)"
+      }
+    ],
+    "rows": [
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "urban_pct_1991": 26.71,
+        "urban_pct_2001": 32.63,
+        "urban_pct_2011": 37.7,
+        "change_1991_2011_pp": 10.99
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "urban_pct_1991": 26.89,
+        "urban_pct_2001": 27.3,
+        "urban_pct_2011": 33.36,
+        "change_1991_2011_pp": 6.47
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "urban_pct_1991": 12.8,
+        "urban_pct_2001": 20.75,
+        "urban_pct_2011": 22.94,
+        "change_1991_2011_pp": 10.14
+      },
+      {
+        "state_ut": "Assam",
+        "urban_pct_1991": 11.1,
+        "urban_pct_2001": 12.9,
+        "urban_pct_2011": 14.1,
+        "change_1991_2011_pp": 3.0
+      },
+      {
+        "state_ut": "Bihar",
+        "urban_pct_1991": 13.14,
+        "urban_pct_2001": 10.46,
+        "urban_pct_2011": 11.29,
+        "change_1991_2011_pp": -1.85
+      },
+      {
+        "state_ut": "Chandigarh",
+        "urban_pct_1991": 89.69,
+        "urban_pct_2001": 89.77,
+        "urban_pct_2011": 97.25,
+        "change_1991_2011_pp": 7.56
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "urban_pct_1991": 17.4,
+        "urban_pct_2001": 20.09,
+        "urban_pct_2011": 23.24,
+        "change_1991_2011_pp": 5.84
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli",
+        "urban_pct_1991": 8.47,
+        "urban_pct_2001": 22.89,
+        "urban_pct_2011": 46.72,
+        "change_1991_2011_pp": 38.25
+      },
+      {
+        "state_ut": "Daman and Diu",
+        "urban_pct_1991": 46.8,
+        "urban_pct_2001": 36.25,
+        "urban_pct_2011": 75.17,
+        "change_1991_2011_pp": 28.37
+      },
+      {
+        "state_ut": "Delhi",
+        "urban_pct_1991": 89.93,
+        "urban_pct_2001": 93.18,
+        "urban_pct_2011": 97.5,
+        "change_1991_2011_pp": 7.57
+      },
+      {
+        "state_ut": "Goa",
+        "urban_pct_1991": 41.01,
+        "urban_pct_2001": 49.76,
+        "urban_pct_2011": 62.17,
+        "change_1991_2011_pp": 21.16
+      },
+      {
+        "state_ut": "Gujarat",
+        "urban_pct_1991": 34.49,
+        "urban_pct_2001": 37.36,
+        "urban_pct_2011": 42.6,
+        "change_1991_2011_pp": 8.11
+      },
+      {
+        "state_ut": "Haryana",
+        "urban_pct_1991": 24.63,
+        "urban_pct_2001": 28.92,
+        "urban_pct_2011": 34.88,
+        "change_1991_2011_pp": 10.25
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "urban_pct_1991": 8.69,
+        "urban_pct_2001": 9.8,
+        "urban_pct_2011": 10.03,
+        "change_1991_2011_pp": 1.34
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "urban_pct_1991": 22.89,
+        "urban_pct_2001": 24.81,
+        "urban_pct_2011": 27.38,
+        "change_1991_2011_pp": 4.49
+      },
+      {
+        "state_ut": "Jharkhand",
+        "urban_pct_1991": 21.25,
+        "urban_pct_2001": 22.24,
+        "urban_pct_2011": 24.05,
+        "change_1991_2011_pp": 2.8
+      },
+      {
+        "state_ut": "Karnataka",
+        "urban_pct_1991": 30.92,
+        "urban_pct_2001": 33.99,
+        "urban_pct_2011": 38.67,
+        "change_1991_2011_pp": 7.75
+      },
+      {
+        "state_ut": "Kerala",
+        "urban_pct_1991": 26.39,
+        "urban_pct_2001": 25.96,
+        "urban_pct_2011": 47.7,
+        "change_1991_2011_pp": 21.31
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "urban_pct_1991": 56.31,
+        "urban_pct_2001": 44.46,
+        "urban_pct_2011": 78.07,
+        "change_1991_2011_pp": 21.76
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "urban_pct_1991": 23.18,
+        "urban_pct_2001": 26.46,
+        "urban_pct_2011": 27.63,
+        "change_1991_2011_pp": 4.45
+      },
+      {
+        "state_ut": "Maharashtra",
+        "urban_pct_1991": 38.69,
+        "urban_pct_2001": 42.43,
+        "urban_pct_2011": 45.22,
+        "change_1991_2011_pp": 6.53
+      },
+      {
+        "state_ut": "Manipur",
+        "urban_pct_1991": 27.52,
+        "urban_pct_2001": 26.58,
+        "urban_pct_2011": 29.21,
+        "change_1991_2011_pp": 1.69
+      },
+      {
+        "state_ut": "Meghalaya",
+        "urban_pct_1991": 18.6,
+        "urban_pct_2001": 19.58,
+        "urban_pct_2011": 20.07,
+        "change_1991_2011_pp": 1.47
+      },
+      {
+        "state_ut": "Mizoram",
+        "urban_pct_1991": 46.1,
+        "urban_pct_2001": 49.63,
+        "urban_pct_2011": 52.11,
+        "change_1991_2011_pp": 6.01
+      },
+      {
+        "state_ut": "Nagaland",
+        "urban_pct_1991": 17.21,
+        "urban_pct_2001": 17.23,
+        "urban_pct_2011": 28.86,
+        "change_1991_2011_pp": 11.65
+      },
+      {
+        "state_ut": "Odisha",
+        "urban_pct_1991": 13.38,
+        "urban_pct_2001": 14.99,
+        "urban_pct_2011": 16.69,
+        "change_1991_2011_pp": 3.31
+      },
+      {
+        "state_ut": "Puducherry",
+        "urban_pct_1991": 64.0,
+        "urban_pct_2001": 66.57,
+        "urban_pct_2011": 68.33,
+        "change_1991_2011_pp": 4.33
+      },
+      {
+        "state_ut": "Punjab",
+        "urban_pct_1991": 29.55,
+        "urban_pct_2001": 33.92,
+        "urban_pct_2011": 37.48,
+        "change_1991_2011_pp": 7.93
+      },
+      {
+        "state_ut": "Rajasthan",
+        "urban_pct_1991": 22.88,
+        "urban_pct_2001": 23.39,
+        "urban_pct_2011": 24.87,
+        "change_1991_2011_pp": 1.99
+      },
+      {
+        "state_ut": "Sikkim",
+        "urban_pct_1991": 9.1,
+        "urban_pct_2001": 11.07,
+        "urban_pct_2011": 25.15,
+        "change_1991_2011_pp": 16.05
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "urban_pct_1991": 34.15,
+        "urban_pct_2001": 44.04,
+        "urban_pct_2011": 48.4,
+        "change_1991_2011_pp": 14.25
+      },
+      {
+        "state_ut": "Tripura",
+        "urban_pct_1991": 15.3,
+        "urban_pct_2001": 17.06,
+        "urban_pct_2011": 26.17,
+        "change_1991_2011_pp": 10.87
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "urban_pct_1991": 19.84,
+        "urban_pct_2001": 20.78,
+        "urban_pct_2011": 22.27,
+        "change_1991_2011_pp": 2.43
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "urban_pct_1991": 22.97,
+        "urban_pct_2001": 25.67,
+        "urban_pct_2011": 30.23,
+        "change_1991_2011_pp": 7.26
+      },
+      {
+        "state_ut": "West Bengal",
+        "urban_pct_1991": 27.48,
+        "urban_pct_2001": 27.97,
+        "urban_pct_2011": 31.87,
+        "change_1991_2011_pp": 4.39
+      },
+      {
+        "state_ut": "India",
+        "urban_pct_1991": 25.73,
+        "urban_pct_2001": 27.82,
+        "urban_pct_2011": 31.14,
+        "change_1991_2011_pp": 5.41
+      }
+    ],
+    "visualKey": "urban_pct_2011",
+    "visualLabel": "Urban population, 2011",
+    "visualUnit": "%"
+  },
+  {
+    "id": "rainfall-imd-2023",
+    "category": "Climate & Hazards",
+    "title": "Monthly rainfall — selected states and UTs",
+    "description": "Explore the seasonality of rainfall using the monthly state/UT totals in the IMD 2023 publication.",
+    "period": "Calendar year 2023",
+    "geography": "13 selected states/UTs from the published table",
+    "unit": "Millimetres (mm)",
+    "sourceLabel": "India Meteorological Department — Rainfall Statistics of India 2023",
+    "sourceUrl": "https://hydro.imd.gov.in/hydrometweb/PRODUCTS/Publications/Rainfall%20Statistics%20of%20India%20-%202023/Rainfall%20Statistics%20of%20India%202023.pdf",
+    "extraSources": [],
+    "caveat": "Selected units only: this is not a full all-India table. Annual total is calculated by summing the 12 displayed monthly values and can differ slightly from officially rounded annual summary values.",
+    "columns": [
+      {
+        "key": "state_ut",
+        "label": "State / UT"
+      },
+      {
+        "key": "jan_mm",
+        "label": "JAN (mm)"
+      },
+      {
+        "key": "feb_mm",
+        "label": "FEB (mm)"
+      },
+      {
+        "key": "mar_mm",
+        "label": "MAR (mm)"
+      },
+      {
+        "key": "apr_mm",
+        "label": "APR (mm)"
+      },
+      {
+        "key": "may_mm",
+        "label": "MAY (mm)"
+      },
+      {
+        "key": "jun_mm",
+        "label": "JUN (mm)"
+      },
+      {
+        "key": "jul_mm",
+        "label": "JUL (mm)"
+      },
+      {
+        "key": "aug_mm",
+        "label": "AUG (mm)"
+      },
+      {
+        "key": "sep_mm",
+        "label": "SEP (mm)"
+      },
+      {
+        "key": "oct_mm",
+        "label": "OCT (mm)"
+      },
+      {
+        "key": "nov_mm",
+        "label": "NOV (mm)"
+      },
+      {
+        "key": "dec_mm",
+        "label": "DEC (mm)"
+      },
+      {
+        "key": "annual_total_mm",
+        "label": "Sum of listed months (mm)"
+      }
+    ],
+    "rows": [
+      {
+        "state_ut": "Arunachal Pradesh",
+        "jan_mm": 10.9,
+        "feb_mm": 98.5,
+        "mar_mm": 114.4,
+        "apr_mm": 110.6,
+        "may_mm": 222.0,
+        "jun_mm": 382.8,
+        "jul_mm": 492.0,
+        "aug_mm": 438.1,
+        "sep_mm": 179.0,
+        "oct_mm": 167.3,
+        "nov_mm": 14.0,
+        "dec_mm": 19.9,
+        "annual_total_mm": 2249.5
+      },
+      {
+        "state_ut": "Assam",
+        "jan_mm": 0.5,
+        "feb_mm": 26.1,
+        "mar_mm": 88.7,
+        "apr_mm": 108.5,
+        "may_mm": 138.0,
+        "jun_mm": 455.4,
+        "jul_mm": 281.4,
+        "aug_mm": 316.8,
+        "sep_mm": 152.4,
+        "oct_mm": 114.5,
+        "nov_mm": 17.3,
+        "dec_mm": 17.2,
+        "annual_total_mm": 1716.8
+      },
+      {
+        "state_ut": "Meghalaya",
+        "jan_mm": 0.1,
+        "feb_mm": 7.4,
+        "mar_mm": 133.4,
+        "apr_mm": 81.1,
+        "may_mm": 172.5,
+        "jun_mm": 892.4,
+        "jul_mm": 598.6,
+        "aug_mm": 581.5,
+        "sep_mm": 277.4,
+        "oct_mm": 237.9,
+        "nov_mm": 15.3,
+        "dec_mm": 25.0,
+        "annual_total_mm": 3022.6
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "jan_mm": 8.1,
+        "feb_mm": 0.0,
+        "mar_mm": 24.9,
+        "apr_mm": 11.9,
+        "may_mm": 37.3,
+        "jun_mm": 77.6,
+        "jul_mm": 221.7,
+        "aug_mm": 198.8,
+        "sep_mm": 123.4,
+        "oct_mm": 26.5,
+        "nov_mm": 3.3,
+        "dec_mm": 5.9,
+        "annual_total_mm": 739.4
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "jan_mm": 30.6,
+        "feb_mm": 6.6,
+        "mar_mm": 63.5,
+        "apr_mm": 64.0,
+        "may_mm": 98.4,
+        "jun_mm": 150.5,
+        "jul_mm": 547.1,
+        "aug_mm": 353.9,
+        "sep_mm": 151.8,
+        "oct_mm": 20.0,
+        "nov_mm": 2.2,
+        "dec_mm": 4.4,
+        "annual_total_mm": 1493.0
+      },
+      {
+        "state_ut": "Haryana",
+        "jan_mm": 11.6,
+        "feb_mm": 0.0,
+        "mar_mm": 41.8,
+        "apr_mm": 14.6,
+        "may_mm": 52.4,
+        "jun_mm": 81.1,
+        "jul_mm": 236.9,
+        "aug_mm": 58.5,
+        "sep_mm": 43.6,
+        "oct_mm": 9.9,
+        "nov_mm": 4.8,
+        "dec_mm": 2.8,
+        "annual_total_mm": 558.0
+      },
+      {
+        "state_ut": "Chandigarh",
+        "jan_mm": 27.7,
+        "feb_mm": 0.0,
+        "mar_mm": 65.7,
+        "apr_mm": 36.3,
+        "may_mm": 106.5,
+        "jun_mm": 142.9,
+        "jul_mm": 760.7,
+        "aug_mm": 270.7,
+        "sep_mm": 52.8,
+        "oct_mm": 23.4,
+        "nov_mm": 18.3,
+        "dec_mm": 32.4,
+        "annual_total_mm": 1537.4
+      },
+      {
+        "state_ut": "Delhi",
+        "jan_mm": 18.3,
+        "feb_mm": 0.0,
+        "mar_mm": 52.8,
+        "apr_mm": 11.8,
+        "may_mm": 85.1,
+        "jun_mm": 133.5,
+        "jul_mm": 230.5,
+        "aug_mm": 86.9,
+        "sep_mm": 91.2,
+        "oct_mm": 4.5,
+        "nov_mm": 8.7,
+        "dec_mm": 0.3,
+        "annual_total_mm": 723.6
+      },
+      {
+        "state_ut": "Punjab",
+        "jan_mm": 15.1,
+        "feb_mm": 0.1,
+        "mar_mm": 56.6,
+        "apr_mm": 26.0,
+        "may_mm": 45.0,
+        "jun_mm": 65.8,
+        "jul_mm": 231.3,
+        "aug_mm": 54.9,
+        "sep_mm": 64.4,
+        "oct_mm": 24.8,
+        "nov_mm": 12.0,
+        "dec_mm": 3.3,
+        "annual_total_mm": 599.3
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "jan_mm": 86.8,
+        "feb_mm": 29.5,
+        "mar_mm": 66.7,
+        "apr_mm": 103.5,
+        "may_mm": 118.2,
+        "jun_mm": 120.7,
+        "jul_mm": 447.5,
+        "aug_mm": 246.4,
+        "sep_mm": 67.1,
+        "oct_mm": 27.2,
+        "nov_mm": 11.7,
+        "dec_mm": 5.7,
+        "annual_total_mm": 1331.0
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "jan_mm": 135.1,
+        "feb_mm": 40.8,
+        "mar_mm": 80.3,
+        "apr_mm": 129.1,
+        "may_mm": 100.5,
+        "jun_mm": 110.7,
+        "jul_mm": 261.1,
+        "aug_mm": 131.0,
+        "sep_mm": 78.5,
+        "oct_mm": 79.7,
+        "nov_mm": 38.6,
+        "dec_mm": 12.6,
+        "annual_total_mm": 1198.0
+      },
+      {
+        "state_ut": "Ladakh",
+        "jan_mm": 9.9,
+        "feb_mm": 12.0,
+        "mar_mm": 1.1,
+        "apr_mm": 10.6,
+        "may_mm": 3.8,
+        "jun_mm": 4.7,
+        "jul_mm": 40.0,
+        "aug_mm": 0.2,
+        "sep_mm": 0.3,
+        "oct_mm": 1.4,
+        "nov_mm": 0.1,
+        "dec_mm": 0.0,
+        "annual_total_mm": 84.1
+      },
+      {
+        "state_ut": "Rajasthan",
+        "jan_mm": 13.0,
+        "feb_mm": 0.0,
+        "mar_mm": 18.6,
+        "apr_mm": 14.5,
+        "may_mm": 62.3,
+        "jun_mm": 156.9,
+        "jul_mm": 228.4,
+        "aug_mm": 30.9,
+        "sep_mm": 83.4,
+        "oct_mm": 8.6,
+        "nov_mm": 9.9,
+        "dec_mm": 4.8,
+        "annual_total_mm": 631.3
+      }
+    ],
+    "visualKey": "annual_total_mm",
+    "visualLabel": "Annual total (sum of months)",
+    "visualUnit": "mm"
+  },
+  {
+    "id": "annual-rainfall-india-2019-2023",
+    "category": "Climate & Hazards",
+    "title": "All-India monthly and annual rainfall",
+    "description": "Compare monthly rainfall distribution and annual totals over five years, then use the linked long-run source for a longer time-series project.",
+    "period": "Calendar years 2019–2023",
+    "geography": "All India aggregate",
+    "unit": "Millimetres (mm)",
+    "sourceLabel": "MoSPI — EnviStats India 2024, Table 1.08 Annual and Monthly Rainfall (source: IMD)",
+    "sourceUrl": "https://www.mospi.gov.in/sites/default/files/reports_and_publication/statistical_publication/EnviStats/Complete_ES1_2024.pdf",
+    "extraSources": [
+      {
+        "label": "Long-run IMD subdivision rainfall series (1901–2025) via Dataful, collated from official sources",
+        "url": "https://dataful.in/datasets/5814/"
+      }
+    ],
+    "caveat": "The embedded snapshot contains 2019–2023 only; it is not a ten-year state-wise rainfall series. Annual totals are taken as reported in the source table and may not exactly equal the sum of rounded displayed monthly values. Use the linked historical series portal to build a longer state/subdivision analysis and record its geographic unit carefully.",
+    "columns": [
+      {
+        "key": "year",
+        "label": "Year"
+      },
+      {
+        "key": "jan_mm",
+        "label": "JAN (mm)"
+      },
+      {
+        "key": "feb_mm",
+        "label": "FEB (mm)"
+      },
+      {
+        "key": "mar_mm",
+        "label": "MAR (mm)"
+      },
+      {
+        "key": "apr_mm",
+        "label": "APR (mm)"
+      },
+      {
+        "key": "may_mm",
+        "label": "MAY (mm)"
+      },
+      {
+        "key": "jun_mm",
+        "label": "JUN (mm)"
+      },
+      {
+        "key": "jul_mm",
+        "label": "JUL (mm)"
+      },
+      {
+        "key": "aug_mm",
+        "label": "AUG (mm)"
+      },
+      {
+        "key": "sep_mm",
+        "label": "SEP (mm)"
+      },
+      {
+        "key": "oct_mm",
+        "label": "OCT (mm)"
+      },
+      {
+        "key": "nov_mm",
+        "label": "NOV (mm)"
+      },
+      {
+        "key": "dec_mm",
+        "label": "DEC (mm)"
+      },
+      {
+        "key": "annual_rainfall_mm",
+        "label": "Annual rainfall (mm)"
+      }
+    ],
+    "rows": [
+      {
+        "year": 2019,
+        "jan_mm": 18.5,
+        "feb_mm": 33.1,
+        "mar_mm": 18.7,
+        "apr_mm": 31.5,
+        "may_mm": 51.3,
+        "jun_mm": 113.5,
+        "jul_mm": 298.8,
+        "aug_mm": 299.9,
+        "sep_mm": 259.5,
+        "oct_mm": 110.1,
+        "nov_mm": 31.6,
+        "dec_mm": 19.2,
+        "annual_rainfall_mm": 1288.8
+      },
+      {
+        "year": 2020,
+        "jan_mm": 28.3,
+        "feb_mm": 12.1,
+        "mar_mm": 44.7,
+        "apr_mm": 42.7,
+        "may_mm": 71.8,
+        "jun_mm": 195.6,
+        "jul_mm": 257.1,
+        "aug_mm": 327.8,
+        "sep_mm": 178.0,
+        "oct_mm": 78.3,
+        "nov_mm": 29.2,
+        "dec_mm": 17.0,
+        "annual_rainfall_mm": 1289.6
+      },
+      {
+        "year": 2021,
+        "jan_mm": 20.2,
+        "feb_mm": 7.6,
+        "mar_mm": 16.7,
+        "apr_mm": 31.1,
+        "may_mm": 107.8,
+        "jun_mm": 182.4,
+        "jul_mm": 266.2,
+        "aug_mm": 196.3,
+        "sep_mm": 229.6,
+        "oct_mm": 100.8,
+        "nov_mm": 56.5,
+        "dec_mm": 20.5,
+        "annual_rainfall_mm": 1236.4
+      },
+      {
+        "year": 2022,
+        "jan_mm": 39.5,
+        "feb_mm": 19.1,
+        "mar_mm": 8.9,
+        "apr_mm": 38.2,
+        "may_mm": 83.2,
+        "jun_mm": 152.2,
+        "jul_mm": 327.2,
+        "aug_mm": 264.0,
+        "sep_mm": 181.4,
+        "oct_mm": 111.8,
+        "nov_mm": 18.6,
+        "dec_mm": 13.6,
+        "annual_rainfall_mm": 1257.0
+      },
+      {
+        "year": 2023,
+        "jan_mm": 14.8,
+        "feb_mm": 7.2,
+        "mar_mm": 37.6,
+        "apr_mm": 41.4,
+        "may_mm": 67.5,
+        "jun_mm": 151.2,
+        "jul_mm": 315.9,
+        "aug_mm": 162.7,
+        "sep_mm": 190.0,
+        "oct_mm": 50.8,
+        "nov_mm": 34.6,
+        "dec_mm": 25.5,
+        "annual_rainfall_mm": 1099.2
+      }
+    ],
+    "visualKey": "annual_rainfall_mm",
+    "visualLabel": "Annual rainfall",
+    "visualUnit": "mm"
+  },
+  {
+    "id": "station-climate-normals",
+    "category": "Climate & Hazards",
+    "title": "Station climate normals: Chennai vs Jaisalmer",
+    "description": "Compare monthly normal daily minimum/maximum temperatures and average rainfall to explore coastal vs arid-climate differences.",
+    "period": "IMD climatological normal period 1981–2010",
+    "geography": "Two IMD station climatology tables",
+    "unit": "°C and mm",
+    "sourceLabel": "IMD City Climatological Tables — Chennai and Jaisalmer",
+    "sourceUrl": "https://city.imd.gov.in/citywx/extreme/JAN/chennai2.htm",
+    "extraSources": [
+      {
+        "label": "IMD Jaisalmer climatology",
+        "url": "https://city.imd.gov.in/citywx/extreme/JAN/jaisalmer2.htm"
+      }
+    ],
+    "caveat": "Only two stations are included. These are 1981–2010 climate normals, not recent daily observations or current-year temperature extremes. Values follow the IMD page’s monthly climatological table.",
+    "columns": [
+      {
+        "key": "station",
+        "label": "Station"
+      },
+      {
+        "key": "month",
+        "label": "Month"
+      },
+      {
+        "key": "mean_daily_min_c",
+        "label": "Mean daily minimum (°C)"
+      },
+      {
+        "key": "mean_daily_max_c",
+        "label": "Mean daily maximum (°C)"
+      },
+      {
+        "key": "mean_total_rainfall_mm",
+        "label": "Mean total rainfall (mm)"
+      }
+    ],
+    "rows": [
+      {
+        "station": "Chennai",
+        "month": "Jan",
+        "mean_daily_min_c": 21.2,
+        "mean_daily_max_c": 29.3,
+        "mean_total_rainfall_mm": 25.9
+      },
+      {
+        "station": "Chennai",
+        "month": "Feb",
+        "mean_daily_min_c": 22.2,
+        "mean_daily_max_c": 30.9,
+        "mean_total_rainfall_mm": 3.4
+      },
+      {
+        "station": "Chennai",
+        "month": "Mar",
+        "mean_daily_min_c": 24.2,
+        "mean_daily_max_c": 32.9,
+        "mean_total_rainfall_mm": 3.5
+      },
+      {
+        "station": "Chennai",
+        "month": "Apr",
+        "mean_daily_min_c": 26.6,
+        "mean_daily_max_c": 34.5,
+        "mean_total_rainfall_mm": 14.4
+      },
+      {
+        "station": "Chennai",
+        "month": "May",
+        "mean_daily_min_c": 28.0,
+        "mean_daily_max_c": 37.1,
+        "mean_total_rainfall_mm": 34.2
+      },
+      {
+        "station": "Chennai",
+        "month": "Jun",
+        "mean_daily_min_c": 27.5,
+        "mean_daily_max_c": 37.0,
+        "mean_total_rainfall_mm": 55.8
+      },
+      {
+        "station": "Chennai",
+        "month": "Jul",
+        "mean_daily_min_c": 26.4,
+        "mean_daily_max_c": 35.3,
+        "mean_total_rainfall_mm": 103.8
+      },
+      {
+        "station": "Chennai",
+        "month": "Aug",
+        "mean_daily_min_c": 25.9,
+        "mean_daily_max_c": 34.7,
+        "mean_total_rainfall_mm": 126.8
+      },
+      {
+        "station": "Chennai",
+        "month": "Sep",
+        "mean_daily_min_c": 25.6,
+        "mean_daily_max_c": 34.2,
+        "mean_total_rainfall_mm": 147.7
+      },
+      {
+        "station": "Chennai",
+        "month": "Oct",
+        "mean_daily_min_c": 24.6,
+        "mean_daily_max_c": 32.1,
+        "mean_total_rainfall_mm": 315.6
+      },
+      {
+        "station": "Chennai",
+        "month": "Nov",
+        "mean_daily_min_c": 23.1,
+        "mean_daily_max_c": 29.9,
+        "mean_total_rainfall_mm": 374.4
+      },
+      {
+        "station": "Chennai",
+        "month": "Dec",
+        "mean_daily_min_c": 21.9,
+        "mean_daily_max_c": 28.9,
+        "mean_total_rainfall_mm": 177.4
+      },
+      {
+        "station": "Jaisalmer",
+        "month": "Jan",
+        "mean_daily_min_c": 9.1,
+        "mean_daily_max_c": 23.8,
+        "mean_total_rainfall_mm": 1.3
+      },
+      {
+        "station": "Jaisalmer",
+        "month": "Feb",
+        "mean_daily_min_c": 12.4,
+        "mean_daily_max_c": 27.3,
+        "mean_total_rainfall_mm": 5.2
+      },
+      {
+        "station": "Jaisalmer",
+        "month": "Mar",
+        "mean_daily_min_c": 18.1,
+        "mean_daily_max_c": 33.3,
+        "mean_total_rainfall_mm": 3.3
+      },
+      {
+        "station": "Jaisalmer",
+        "month": "Apr",
+        "mean_daily_min_c": 23.5,
+        "mean_daily_max_c": 39.1,
+        "mean_total_rainfall_mm": 7.2
+      },
+      {
+        "station": "Jaisalmer",
+        "month": "May",
+        "mean_daily_min_c": 26.4,
+        "mean_daily_max_c": 41.9,
+        "mean_total_rainfall_mm": 7.2
+      },
+      {
+        "station": "Jaisalmer",
+        "month": "Jun",
+        "mean_daily_min_c": 27.6,
+        "mean_daily_max_c": 40.9,
+        "mean_total_rainfall_mm": 21.0
+      },
+      {
+        "station": "Jaisalmer",
+        "month": "Jul",
+        "mean_daily_min_c": 27.0,
+        "mean_daily_max_c": 38.1,
+        "mean_total_rainfall_mm": 59.2
+      },
+      {
+        "station": "Jaisalmer",
+        "month": "Aug",
+        "mean_daily_min_c": 25.9,
+        "mean_daily_max_c": 36.6,
+        "mean_total_rainfall_mm": 72.2
+      },
+      {
+        "station": "Jaisalmer",
+        "month": "Sep",
+        "mean_daily_min_c": 25.0,
+        "mean_daily_max_c": 37.1,
+        "mean_total_rainfall_mm": 19.3
+      },
+      {
+        "station": "Jaisalmer",
+        "month": "Oct",
+        "mean_daily_min_c": 21.8,
+        "mean_daily_max_c": 36.5,
+        "mean_total_rainfall_mm": 3.0
+      },
+      {
+        "station": "Jaisalmer",
+        "month": "Nov",
+        "mean_daily_min_c": 15.9,
+        "mean_daily_max_c": 31.3,
+        "mean_total_rainfall_mm": 0.7
+      },
+      {
+        "station": "Jaisalmer",
+        "month": "Dec",
+        "mean_daily_min_c": 10.5,
+        "mean_daily_max_c": 25.4,
+        "mean_total_rainfall_mm": 2.1
+      }
+    ],
+    "visualKey": null,
+    "visualLabel": null,
+    "visualUnit": null
+  },
+  {
+    "id": "rice-yield",
+    "category": "Agriculture & Resources",
+    "title": "Rice yield by major producing state",
+    "description": "Compare rice yield over two agricultural years across major producing states and the national aggregate.",
+    "period": "Agricultural years 2021–22 and 2022–23",
+    "geography": "Major producing states plus All India",
+    "unit": "Kilograms per hectare (kg/ha)",
+    "sourceLabel": "Department of Agriculture & Farmers Welfare — Agricultural Statistics at a Glance 2023, Table 2.4(b)",
+    "sourceUrl": "https://www.desagri.gov.in/wp-content/uploads/2024/09/Agricultural-Statistics-at-a-Glance-2023.pdf",
+    "extraSources": [],
+    "caveat": "These are major producing states listed in the table, not every state/UT. Values are yields, not production tonnes or crop area.",
+    "columns": [
+      {
+        "key": "state",
+        "label": "State"
+      },
+      {
+        "key": "yield_2021_22_kg_ha",
+        "label": "Yield 2021–22 (kg/ha)"
+      },
+      {
+        "key": "yield_2022_23_kg_ha",
+        "label": "Yield 2022–23 (kg/ha)"
+      },
+      {
+        "key": "change_kg_ha",
+        "label": "Change (kg/ha)"
+      }
+    ],
+    "rows": [
+      {
+        "state": "Uttar Pradesh",
+        "yield_2021_22_kg_ha": 2678,
+        "yield_2022_23_kg_ha": 2737,
+        "change_kg_ha": 59
+      },
+      {
+        "state": "Telangana",
+        "yield_2021_22_kg_ha": 3395,
+        "yield_2022_23_kg_ha": 3406,
+        "change_kg_ha": 11
+      },
+      {
+        "state": "West Bengal",
+        "yield_2021_22_kg_ha": 2995,
+        "yield_2022_23_kg_ha": 3057,
+        "change_kg_ha": 62
+      },
+      {
+        "state": "Punjab",
+        "yield_2021_22_kg_ha": 4340,
+        "yield_2022_23_kg_ha": 4193,
+        "change_kg_ha": -147
+      },
+      {
+        "state": "Chhattisgarh",
+        "yield_2021_22_kg_ha": 2134,
+        "yield_2022_23_kg_ha": 2602,
+        "change_kg_ha": 468
+      },
+      {
+        "state": "Odisha",
+        "yield_2021_22_kg_ha": 2353,
+        "yield_2022_23_kg_ha": 2030,
+        "change_kg_ha": -323
+      },
+      {
+        "state": "Andhra Pradesh",
+        "yield_2021_22_kg_ha": 3392,
+        "yield_2022_23_kg_ha": 3730,
+        "change_kg_ha": 338
+      },
+      {
+        "state": "Tamil Nadu",
+        "yield_2021_22_kg_ha": 3566,
+        "yield_2022_23_kg_ha": 3500,
+        "change_kg_ha": -66
+      },
+      {
+        "state": "Bihar",
+        "yield_2021_22_kg_ha": 2496,
+        "yield_2022_23_kg_ha": 2453,
+        "change_kg_ha": -43
+      },
+      {
+        "state": "Madhya Pradesh",
+        "yield_2021_22_kg_ha": 2283,
+        "yield_2022_23_kg_ha": 2057,
+        "change_kg_ha": -226
+      },
+      {
+        "state": "All India",
+        "yield_2021_22_kg_ha": 2798,
+        "yield_2022_23_kg_ha": 2838,
+        "change_kg_ha": 40
+      }
+    ],
+    "visualKey": "yield_2022_23_kg_ha",
+    "visualLabel": "Rice yield, 2022–23",
+    "visualUnit": "kg/ha"
+  },
+  {
+    "id": "wheat-yield",
+    "category": "Agriculture & Resources",
+    "title": "Wheat yield and irrigation coverage",
+    "description": "Compare yield in the 2022–23 agricultural year with reported crop irrigation coverage for 2021–22.",
+    "period": "Yield 2022–23; crop irrigation coverage 2021–22",
+    "geography": "Selected wheat-producing states plus All India",
+    "unit": "kg/ha; irrigation %",
+    "sourceLabel": "Department of Agriculture & Farmers Welfare — Agricultural Statistics at a Glance 2023, Table 2.5(b)",
+    "sourceUrl": "https://www.desagri.gov.in/wp-content/uploads/2024/09/Agricultural-Statistics-at-a-Glance-2023.pdf",
+    "extraSources": [],
+    "caveat": "The two columns refer to different agricultural years: wheat yield 2022–23 and irrigation coverage 2021–22. Coverage is not the share of all land irrigated in the state.",
+    "columns": [
+      {
+        "key": "state",
+        "label": "State"
+      },
+      {
+        "key": "yield_2022_23_kg_ha",
+        "label": "Yield 2022–23 (kg/ha)"
+      },
+      {
+        "key": "irrigated_area_2021_22_pct",
+        "label": "Crop area irrigated 2021–22 (%)"
+      }
+    ],
+    "rows": [
+      {
+        "state": "Uttar Pradesh",
+        "yield_2022_23_kg_ha": 3531,
+        "irrigated_area_2021_22_pct": 97.92
+      },
+      {
+        "state": "Madhya Pradesh",
+        "yield_2022_23_kg_ha": 3179,
+        "irrigated_area_2021_22_pct": 96.34
+      },
+      {
+        "state": "Punjab",
+        "yield_2022_23_kg_ha": 4748,
+        "irrigated_area_2021_22_pct": 98.92
+      },
+      {
+        "state": "Haryana",
+        "yield_2022_23_kg_ha": 4704,
+        "irrigated_area_2021_22_pct": 100.0
+      },
+      {
+        "state": "Rajasthan",
+        "yield_2022_23_kg_ha": 3807,
+        "irrigated_area_2021_22_pct": 99.61
+      },
+      {
+        "state": "Bihar",
+        "yield_2022_23_kg_ha": 2958,
+        "irrigated_area_2021_22_pct": 96.02
+      },
+      {
+        "state": "Gujarat",
+        "yield_2022_23_kg_ha": 3248,
+        "irrigated_area_2021_22_pct": 97.77
+      },
+      {
+        "state": "Maharashtra",
+        "yield_2022_23_kg_ha": 1948,
+        "irrigated_area_2021_22_pct": 73.94
+      },
+      {
+        "state": "Uttarakhand",
+        "yield_2022_23_kg_ha": 2916,
+        "irrigated_area_2021_22_pct": 69.12
+      },
+      {
+        "state": "Himachal Pradesh",
+        "yield_2022_23_kg_ha": 1853,
+        "irrigated_area_2021_22_pct": 27.64
+      },
+      {
+        "state": "All India",
+        "yield_2022_23_kg_ha": 3521,
+        "irrigated_area_2021_22_pct": 95.29
+      }
+    ],
+    "visualKey": "yield_2022_23_kg_ha",
+    "visualLabel": "Wheat yield, 2022–23",
+    "visualUnit": "kg/ha"
+  },
+  {
+    "id": "sugarcane-yield",
+    "category": "Agriculture & Resources",
+    "title": "Sugarcane yield by state",
+    "description": "Compare sugarcane yields for two agricultural years in selected producing states.",
+    "period": "Agricultural years 2021–22 and 2022–23",
+    "geography": "Selected producing states plus All India",
+    "unit": "kg/ha",
+    "sourceLabel": "Department of Agriculture & Farmers Welfare — Agricultural Statistics at a Glance 2023, Table 2.21(b)",
+    "sourceUrl": "https://www.desagri.gov.in/wp-content/uploads/2024/09/Agricultural-Statistics-at-a-Glance-2023.pdf",
+    "extraSources": [],
+    "caveat": "Selected state rows from the published table. Yield is kilograms per hectare; it is not the same as total production.",
+    "columns": [
+      {
+        "key": "state",
+        "label": "State"
+      },
+      {
+        "key": "yield_2021_22_kg_ha",
+        "label": "Yield 2021–22 (kg/ha)"
+      },
+      {
+        "key": "yield_2022_23_kg_ha",
+        "label": "Yield 2022–23 (kg/ha)"
+      },
+      {
+        "key": "change_kg_ha",
+        "label": "Change (kg/ha)"
+      }
+    ],
+    "rows": [
+      {
+        "state": "Uttar Pradesh",
+        "yield_2021_22_kg_ha": 82300,
+        "yield_2022_23_kg_ha": 80244,
+        "change_kg_ha": -2056
+      },
+      {
+        "state": "Maharashtra",
+        "yield_2021_22_kg_ha": 92000,
+        "yield_2022_23_kg_ha": 91200,
+        "change_kg_ha": -800
+      },
+      {
+        "state": "Karnataka",
+        "yield_2021_22_kg_ha": 96000,
+        "yield_2022_23_kg_ha": 90000,
+        "change_kg_ha": -6000
+      },
+      {
+        "state": "Tamil Nadu",
+        "yield_2021_22_kg_ha": 109240,
+        "yield_2022_23_kg_ha": 111080,
+        "change_kg_ha": 1840
+      },
+      {
+        "state": "Gujarat",
+        "yield_2021_22_kg_ha": 78306,
+        "yield_2022_23_kg_ha": 74344,
+        "change_kg_ha": -3962
+      },
+      {
+        "state": "Bihar",
+        "yield_2021_22_kg_ha": 56949,
+        "yield_2022_23_kg_ha": 60627,
+        "change_kg_ha": 3678
+      },
+      {
+        "state": "Haryana",
+        "yield_2021_22_kg_ha": 81918,
+        "yield_2022_23_kg_ha": 82232,
+        "change_kg_ha": 314
+      },
+      {
+        "state": "Punjab",
+        "yield_2021_22_kg_ha": 82153,
+        "yield_2022_23_kg_ha": 83123,
+        "change_kg_ha": 970
+      },
+      {
+        "state": "Madhya Pradesh",
+        "yield_2021_22_kg_ha": 57840,
+        "yield_2022_23_kg_ha": 70040,
+        "change_kg_ha": 12200
+      },
+      {
+        "state": "Uttarakhand",
+        "yield_2021_22_kg_ha": 80000,
+        "yield_2022_23_kg_ha": 80000,
+        "change_kg_ha": 0
+      },
+      {
+        "state": "All India",
+        "yield_2021_22_kg_ha": 84906,
+        "yield_2022_23_kg_ha": 83349,
+        "change_kg_ha": -1557
+      }
+    ],
+    "visualKey": "yield_2022_23_kg_ha",
+    "visualLabel": "Sugarcane yield, 2022–23",
+    "visualUnit": "kg/ha"
+  },
+  {
+    "id": "irrigation-national",
+    "category": "Agriculture & Resources",
+    "title": "Irrigation coverage and water sources",
+    "description": "National-level indicators show the role of irrigated area and the relative importance of canals, tube-wells and wells.",
+    "period": "Land Use Statistics 2021–22 and 2022–23",
+    "geography": "India national aggregate",
+    "unit": "Unit shown per row",
+    "sourceLabel": "Department of Agriculture & Farmers Welfare — Land Use Statistics at a Glance 2022–23",
+    "sourceUrl": "https://desagri.gov.in/wp-content/uploads/2024/09/Final-file-of-LUS-2022-23-for-uploading.pdf",
+    "extraSources": [],
+    "caveat": "This is a national aggregate, not a state-wise table. Canal/tube-well/well shares describe source composition and do not necessarily sum to 100% because other sources also exist.",
+    "columns": [
+      {
+        "key": "indicator",
+        "label": "Indicator"
+      },
+      {
+        "key": "period",
+        "label": "Period"
+      },
+      {
+        "key": "value",
+        "label": "Value"
+      },
+      {
+        "key": "unit",
+        "label": "Unit"
+      },
+      {
+        "key": "definition",
+        "label": "Definition / note"
+      }
+    ],
+    "rows": [
+      {
+        "indicator": "Net irrigated area",
+        "period": "2022–23",
+        "value": 79312,
+        "unit": "thousand hectares",
+        "definition": "Area irrigated at least once during the agricultural year."
+      },
+      {
+        "indicator": "Gross irrigated area",
+        "period": "2022–23",
+        "value": 122294,
+        "unit": "thousand hectares",
+        "definition": "Includes repeated irrigation of the same land during the year."
+      },
+      {
+        "indicator": "Net irrigated area / net area sown",
+        "period": "2021–22",
+        "value": 55.26,
+        "unit": "percent",
+        "definition": "National ratio reported in Land Use Statistics at a Glance."
+      },
+      {
+        "indicator": "Net irrigated area / net area sown",
+        "period": "2022–23",
+        "value": 56.37,
+        "unit": "percent",
+        "definition": "National ratio reported in Land Use Statistics at a Glance."
+      },
+      {
+        "indicator": "Gross irrigated area / gross cropped area",
+        "period": "2021–22",
+        "value": 54.9,
+        "unit": "percent",
+        "definition": "National ratio reported in Land Use Statistics at a Glance."
+      },
+      {
+        "indicator": "Gross irrigated area / gross cropped area",
+        "period": "2022–23",
+        "value": 55.8,
+        "unit": "percent",
+        "definition": "National ratio reported in Land Use Statistics at a Glance."
+      },
+      {
+        "indicator": "Canals share of total irrigated area",
+        "period": "2022–23",
+        "value": 22.85,
+        "unit": "percent",
+        "definition": "Share of total irrigated area by source."
+      },
+      {
+        "indicator": "Tube-wells share of total irrigated area",
+        "period": "2022–23",
+        "value": 49.34,
+        "unit": "percent",
+        "definition": "Share of total irrigated area by source."
+      },
+      {
+        "indicator": "Wells share of total irrigated area",
+        "period": "2022–23",
+        "value": 13.46,
+        "unit": "percent",
+        "definition": "Share of total irrigated area by source."
+      }
+    ],
+    "visualKey": null,
+    "visualLabel": null,
+    "visualUnit": null
+  },
+  {
+    "id": "occupational-structure",
+    "category": "Population & Society",
+    "title": "Occupational structure of workers",
+    "description": "Explore Census worker categories and how their distribution differs by sex and rural/urban residence.",
+    "period": "Census 2011",
+    "geography": "India national aggregate",
+    "unit": "Percent of workers within each subgroup",
+    "sourceLabel": "MoSPI — Census 2011 worker distribution tables",
+    "sourceUrl": "https://mospi.gov.in/sites/default/files/publication_reports/Chapter_4_2014.pdf",
+    "extraSources": [],
+    "caveat": "These are worker-category shares (main + marginal workers) for 2011. “Other workers” is a broad residual category and should not be treated as an exact tertiary-sector percentage.",
+    "columns": [
+      {
+        "key": "worker_category",
+        "label": "Worker category"
+      },
+      {
+        "key": "female_workers_pct",
+        "label": "Female workers (%)"
+      },
+      {
+        "key": "male_workers_pct",
+        "label": "Male workers (%)"
+      },
+      {
+        "key": "all_workers_pct",
+        "label": "All workers (%)"
+      },
+      {
+        "key": "rural_workers_pct",
+        "label": "Rural workers (%)"
+      },
+      {
+        "key": "urban_workers_pct",
+        "label": "Urban workers (%)"
+      }
+    ],
+    "rows": [
+      {
+        "worker_category": "Cultivators",
+        "female_workers_pct": 24.01,
+        "male_workers_pct": 24.92,
+        "all_workers_pct": 24.6,
+        "rural_workers_pct": 33.0,
+        "urban_workers_pct": 2.8
+      },
+      {
+        "worker_category": "Agricultural labourers",
+        "female_workers_pct": 41.09,
+        "male_workers_pct": 24.93,
+        "all_workers_pct": 30.0,
+        "rural_workers_pct": 39.3,
+        "urban_workers_pct": 5.5
+      },
+      {
+        "worker_category": "Household industry workers",
+        "female_workers_pct": 5.71,
+        "male_workers_pct": 2.95,
+        "all_workers_pct": 3.8,
+        "rural_workers_pct": 3.4,
+        "urban_workers_pct": 4.8
+      },
+      {
+        "worker_category": "Other workers",
+        "female_workers_pct": 29.18,
+        "male_workers_pct": 47.2,
+        "all_workers_pct": 41.6,
+        "rural_workers_pct": 24.3,
+        "urban_workers_pct": 86.9
+      }
+    ],
+    "visualKey": "all_workers_pct",
+    "visualLabel": "Share of all workers",
+    "visualUnit": "%"
+  },
+  {
+    "id": "power-capacity",
+    "category": "Infrastructure & Development",
+    "title": "Installed electricity capacity by state/UT",
+    "description": "Explore state/UT installed capacity from the Central Electricity Authority General Review, comparing year-end 2022 and 2023.",
+    "period": "As at 31 March 2022 and 31 March 2023",
+    "geography": "State/UT figures; one All India total includes central sector",
+    "unit": "Megawatts (MW)",
+    "sourceLabel": "Central Electricity Authority — General Review 2024, Table 3.3",
+    "sourceUrl": "https://cea.nic.in/wp-content/uploads/general/2024/General_Review_2024_2.pdf",
+    "extraSources": [],
+    "caveat": "This is a historical capacity snapshot, not current installed capacity. The All India figure includes Central Sector and is not directly the sum of state rows. Jammu & Kashmir and Ladakh are combined in the cited table.",
+    "columns": [
+      {
+        "key": "state_ut",
+        "label": "State / UT"
+      },
+      {
+        "key": "capacity_2021_22_mw",
+        "label": "Capacity 31 Mar 2022 (MW)"
+      },
+      {
+        "key": "capacity_2022_23_mw",
+        "label": "Capacity 31 Mar 2023 (MW)"
+      },
+      {
+        "key": "change_mw",
+        "label": "Change (MW)"
+      }
+    ],
+    "rows": [
+      {
+        "state_ut": "Chandigarh",
+        "capacity_2021_22_mw": 55.17,
+        "capacity_2022_23_mw": 58.69,
+        "change_mw": 3.52
+      },
+      {
+        "state_ut": "Delhi",
+        "capacity_2021_22_mw": 2625.52,
+        "capacity_2022_23_mw": 2657.74,
+        "change_mw": 32.22
+      },
+      {
+        "state_ut": "Haryana",
+        "capacity_2021_22_mw": 6261.13,
+        "capacity_2022_23_mw": 6381.01,
+        "change_mw": 119.88
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "capacity_2021_22_mw": 3955.07,
+        "capacity_2022_23_mw": 3982.0,
+        "change_mw": 26.93
+      },
+      {
+        "state_ut": "Jammu and Kashmir & Ladakh",
+        "capacity_2021_22_mw": 1644.05,
+        "capacity_2022_23_mw": 1649.91,
+        "change_mw": 5.86
+      },
+      {
+        "state_ut": "Punjab",
+        "capacity_2021_22_mw": 9935.22,
+        "capacity_2022_23_mw": 10033.03,
+        "change_mw": 97.81
+      },
+      {
+        "state_ut": "Rajasthan",
+        "capacity_2021_22_mw": 28759.42,
+        "capacity_2022_23_mw": 34116.55,
+        "change_mw": 5357.13
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "capacity_2021_22_mw": 18611.62,
+        "capacity_2022_23_mw": 18815.15,
+        "change_mw": 203.53
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "capacity_2021_22_mw": 3561.95,
+        "capacity_2022_23_mw": 3683.94,
+        "change_mw": 121.99
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "capacity_2021_22_mw": 16997.08,
+        "capacity_2022_23_mw": 17427.82,
+        "change_mw": 430.74
+      },
+      {
+        "state_ut": "Gujarat",
+        "capacity_2021_22_mw": 37346.42,
+        "capacity_2022_23_mw": 40194.37,
+        "change_mw": 2847.95
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "capacity_2021_22_mw": 18667.54,
+        "capacity_2022_23_mw": 18503.74,
+        "change_mw": -163.8
+      },
+      {
+        "state_ut": "Maharashtra",
+        "capacity_2021_22_mw": 36121.92,
+        "capacity_2022_23_mw": 38222.34,
+        "change_mw": 2100.42
+      },
+      {
+        "state_ut": "Daman and Diu",
+        "capacity_2021_22_mw": 40.72,
+        "capacity_2022_23_mw": 41.01,
+        "change_mw": 0.29
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli",
+        "capacity_2021_22_mw": 5.46,
+        "capacity_2022_23_mw": 5.46,
+        "change_mw": 0.0
+      },
+      {
+        "state_ut": "Goa",
+        "capacity_2021_22_mw": 68.34,
+        "capacity_2022_23_mw": 74.88,
+        "change_mw": 6.54
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "capacity_2021_22_mw": 22939.23,
+        "capacity_2022_23_mw": 23887.85,
+        "change_mw": 948.62
+      },
+      {
+        "state_ut": "Telangana",
+        "capacity_2021_22_mw": 14892.89,
+        "capacity_2022_23_mw": 15039.07,
+        "change_mw": 146.18
+      },
+      {
+        "state_ut": "Karnataka",
+        "capacity_2021_22_mw": 26641.39,
+        "capacity_2022_23_mw": 27456.03,
+        "change_mw": 814.64
+      },
+      {
+        "state_ut": "Kerala",
+        "capacity_2021_22_mw": 2811.16,
+        "capacity_2022_23_mw": 3241.06,
+        "change_mw": 429.9
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "capacity_2021_22_mw": 27128.79,
+        "capacity_2022_23_mw": 28949.84,
+        "change_mw": 1821.05
+      },
+      {
+        "state_ut": "Puducherry",
+        "capacity_2021_22_mw": 46.19,
+        "capacity_2022_23_mw": 68.03,
+        "change_mw": 21.84
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "capacity_2021_22_mw": 3.27,
+        "capacity_2022_23_mw": 30.1,
+        "change_mw": 26.83
+      },
+      {
+        "state_ut": "Bihar",
+        "capacity_2021_22_mw": 387.35,
+        "capacity_2022_23_mw": 389.6,
+        "change_mw": 2.25
+      },
+      {
+        "state_ut": "Jharkhand",
+        "capacity_2021_22_mw": 2477.14,
+        "capacity_2022_23_mw": 2494.19,
+        "change_mw": 17.05
+      },
+      {
+        "state_ut": "Odisha",
+        "capacity_2021_22_mw": 7621.31,
+        "capacity_2022_23_mw": 7632.24,
+        "change_mw": 10.93
+      },
+      {
+        "state_ut": "West Bengal",
+        "capacity_2021_22_mw": 8519.95,
+        "capacity_2022_23_mw": 8534.57,
+        "change_mw": 14.62
+      },
+      {
+        "state_ut": "Sikkim",
+        "capacity_2021_22_mw": 928.79,
+        "capacity_2022_23_mw": 931.8,
+        "change_mw": 3.01
+      },
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "capacity_2021_22_mw": 69.69,
+        "capacity_2022_23_mw": 122.77,
+        "change_mw": 53.08
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "capacity_2021_22_mw": 142.34,
+        "capacity_2022_23_mw": 144.75,
+        "change_mw": 2.41
+      },
+      {
+        "state_ut": "Assam",
+        "capacity_2021_22_mw": 558.41,
+        "capacity_2022_23_mw": 565.4,
+        "change_mw": 6.99
+      },
+      {
+        "state_ut": "Manipur",
+        "capacity_2021_22_mw": 53.7,
+        "capacity_2022_23_mw": 53.73,
+        "change_mw": 0.03
+      },
+      {
+        "state_ut": "Meghalaya",
+        "capacity_2021_22_mw": 372.48,
+        "capacity_2022_23_mw": 372.48,
+        "change_mw": 0.0
+      },
+      {
+        "state_ut": "Mizoram",
+        "capacity_2021_22_mw": 44.37,
+        "capacity_2022_23_mw": 73.49,
+        "change_mw": 29.12
+      },
+      {
+        "state_ut": "Nagaland",
+        "capacity_2021_22_mw": 33.71,
+        "capacity_2022_23_mw": 35.71,
+        "change_mw": 2.0
+      },
+      {
+        "state_ut": "Tripura",
+        "capacity_2021_22_mw": 162.9,
+        "capacity_2022_23_mw": 133.61,
+        "change_mw": -29.29
+      },
+      {
+        "state_ut": "All India incl. central sector",
+        "capacity_2021_22_mw": 399496.61,
+        "capacity_2022_23_mw": 416058.89,
+        "change_mw": 16562.28
+      }
+    ],
+    "visualKey": "capacity_2022_23_mw",
+    "visualLabel": "Installed capacity, 2023",
+    "visualUnit": "MW"
+  },
+  {
+    "id": "road-length",
+    "category": "Infrastructure & Development",
+    "title": "State/UT road network — reported rows",
+    "description": "Compare total and surfaced road length using the MoRTH Basic Road Statistics report.",
+    "period": "As at 31 March 2020",
+    "geography": "31 state/UT records from the reported table extract",
+    "unit": "Kilometres",
+    "sourceLabel": "Ministry of Road Transport & Highways — Basic Road Statistics of India 2019–20",
+    "sourceUrl": "https://morth.nic.in/sites/default/files/Basic%20Road%20Statistics%20of%20India-2019-20.pdf",
+    "extraSources": [],
+    "caveat": "Only the 31 rows captured from the published state/UT table are bundled here; missing units are not assumed to be zero. This is road length, not road density: to calculate density divide road length by the state/UT area. Values are historical, not current.",
+    "columns": [
+      {
+        "key": "state_ut",
+        "label": "State / UT"
+      },
+      {
+        "key": "total_road_length_km",
+        "label": "Total road length (km)"
+      },
+      {
+        "key": "surfaced_road_length_km",
+        "label": "Surfaced road length (km)"
+      },
+      {
+        "key": "unsurfaced_road_length_km",
+        "label": "Unsurfaced road length (km; derived)"
+      }
+    ],
+    "rows": [
+      {
+        "state_ut": "Andhra Pradesh",
+        "total_road_length_km": 178676,
+        "surfaced_road_length_km": 119584,
+        "unsurfaced_road_length_km": 59092
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "total_road_length_km": 52916,
+        "surfaced_road_length_km": 37357,
+        "unsurfaced_road_length_km": 15559
+      },
+      {
+        "state_ut": "Assam",
+        "total_road_length_km": 450290,
+        "surfaced_road_length_km": 111771,
+        "unsurfaced_road_length_km": 338519
+      },
+      {
+        "state_ut": "Bihar",
+        "total_road_length_km": 299576,
+        "surfaced_road_length_km": 230666,
+        "unsurfaced_road_length_km": 68910
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "total_road_length_km": 111624,
+        "surfaced_road_length_km": 85019,
+        "unsurfaced_road_length_km": 26605
+      },
+      {
+        "state_ut": "Goa",
+        "total_road_length_km": 18972,
+        "surfaced_road_length_km": 14027,
+        "unsurfaced_road_length_km": 4945
+      },
+      {
+        "state_ut": "Gujarat",
+        "total_road_length_km": 260627,
+        "surfaced_road_length_km": 230249,
+        "unsurfaced_road_length_km": 30378
+      },
+      {
+        "state_ut": "Haryana",
+        "total_road_length_km": 53738,
+        "surfaced_road_length_km": 44165,
+        "unsurfaced_road_length_km": 9573
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "total_road_length_km": 68116,
+        "surfaced_road_length_km": 47157,
+        "unsurfaced_road_length_km": 20959
+      },
+      {
+        "state_ut": "Jharkhand",
+        "total_road_length_km": 83962,
+        "surfaced_road_length_km": 68688,
+        "unsurfaced_road_length_km": 15274
+      },
+      {
+        "state_ut": "Karnataka",
+        "total_road_length_km": 369687,
+        "surfaced_road_length_km": 220524,
+        "unsurfaced_road_length_km": 149163
+      },
+      {
+        "state_ut": "Kerala",
+        "total_road_length_km": 258375,
+        "surfaced_road_length_km": 179741,
+        "unsurfaced_road_length_km": 78634
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "total_road_length_km": 369271,
+        "surfaced_road_length_km": 316628,
+        "unsurfaced_road_length_km": 52643
+      },
+      {
+        "state_ut": "Maharashtra",
+        "total_road_length_km": 609872,
+        "surfaced_road_length_km": 457357,
+        "unsurfaced_road_length_km": 152515
+      },
+      {
+        "state_ut": "Manipur",
+        "total_road_length_km": 32694,
+        "surfaced_road_length_km": 19249,
+        "unsurfaced_road_length_km": 13445
+      },
+      {
+        "state_ut": "Meghalaya",
+        "total_road_length_km": 44241,
+        "surfaced_road_length_km": 21221,
+        "unsurfaced_road_length_km": 23020
+      },
+      {
+        "state_ut": "Mizoram",
+        "total_road_length_km": 19418,
+        "surfaced_road_length_km": 11557,
+        "unsurfaced_road_length_km": 7861
+      },
+      {
+        "state_ut": "Nagaland",
+        "total_road_length_km": 37844,
+        "surfaced_road_length_km": 19155,
+        "unsurfaced_road_length_km": 18689
+      },
+      {
+        "state_ut": "Odisha",
+        "total_road_length_km": 303923,
+        "surfaced_road_length_km": 213016,
+        "unsurfaced_road_length_km": 90907
+      },
+      {
+        "state_ut": "Punjab",
+        "total_road_length_km": 148768,
+        "surfaced_road_length_km": 136207,
+        "unsurfaced_road_length_km": 12561
+      },
+      {
+        "state_ut": "Rajasthan",
+        "total_road_length_km": 265588,
+        "surfaced_road_length_km": 235683,
+        "unsurfaced_road_length_km": 29905
+      },
+      {
+        "state_ut": "Sikkim",
+        "total_road_length_km": 12296,
+        "surfaced_road_length_km": 9473,
+        "unsurfaced_road_length_km": 2823
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "total_road_length_km": 272974,
+        "surfaced_road_length_km": 228217,
+        "unsurfaced_road_length_km": 44757
+      },
+      {
+        "state_ut": "Telangana",
+        "total_road_length_km": 141400,
+        "surfaced_road_length_km": 106581,
+        "unsurfaced_road_length_km": 34819
+      },
+      {
+        "state_ut": "Tripura",
+        "total_road_length_km": 35340,
+        "surfaced_road_length_km": 28452,
+        "unsurfaced_road_length_km": 6888
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "total_road_length_km": 63679,
+        "surfaced_road_length_km": 45914,
+        "unsurfaced_road_length_km": 17765
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "total_road_length_km": 459846,
+        "surfaced_road_length_km": 391265,
+        "unsurfaced_road_length_km": 68581
+      },
+      {
+        "state_ut": "West Bengal",
+        "total_road_length_km": 285197,
+        "surfaced_road_length_km": 201912,
+        "unsurfaced_road_length_km": 83285
+      },
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "total_road_length_km": 1892,
+        "surfaced_road_length_km": 1752,
+        "unsurfaced_road_length_km": 140
+      },
+      {
+        "state_ut": "Chandigarh",
+        "total_road_length_km": 2592,
+        "surfaced_road_length_km": 2592,
+        "unsurfaced_road_length_km": 0
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli",
+        "total_road_length_km": 1161,
+        "surfaced_road_length_km": 1161,
+        "unsurfaced_road_length_km": 0
+      }
+    ],
+    "visualKey": "total_road_length_km",
+    "visualLabel": "Total road length",
+    "visualUnit": "km"
+  },
+  {
+    "id": "mineral-energy-locations",
+    "category": "Agriculture & Resources",
+    "title": "Major mineral & energy locations — starter list",
+    "description": "A selected place-name dataset for projects on coalfields, iron ore, lignite and power stations.",
+    "period": "Selected examples; mixed reference dates",
+    "geography": "Selected named locations, not exhaustive",
+    "unit": "Location names and categories",
+    "sourceLabel": "Ministry of Coal; Indian Bureau of Mines; NTPC; NPCIL",
+    "sourceUrl": "https://coal.gov.in/",
+    "extraSources": [
+      {
+        "label": "Indian Bureau of Mines",
+        "url": "https://ibm.gov.in/"
+      },
+      {
+        "label": "NTPC",
+        "url": "https://ntpc.co.in/"
+      },
+      {
+        "label": "Nuclear Power Corporation of India",
+        "url": "https://www.npcil.nic.in/"
+      }
+    ],
+    "caveat": "This is a starter place list, not a full inventory and not geocoded; it is suitable for state-wise discussion but not directly for a dot map. Add verified coordinates and source each site before spatial plotting.",
+    "columns": [
+      {
+        "key": "site_or_region",
+        "label": "Site / region"
+      },
+      {
+        "key": "district_or_region",
+        "label": "District / region"
+      },
+      {
+        "key": "state_or_region",
+        "label": "State / region"
+      },
+      {
+        "key": "site_type",
+        "label": "Type"
+      },
+      {
+        "key": "resource_or_function",
+        "label": "Resource / function"
+      }
+    ],
+    "rows": [
+      {
+        "site_or_region": "Jharia Coalfield",
+        "district_or_region": "Dhanbad",
+        "state_or_region": "Jharkhand",
+        "site_type": "Coalfield",
+        "resource_or_function": "Coal"
+      },
+      {
+        "site_or_region": "Raniganj Coalfield",
+        "district_or_region": "Paschim Bardhaman",
+        "state_or_region": "West Bengal",
+        "site_type": "Coalfield",
+        "resource_or_function": "Coal"
+      },
+      {
+        "site_or_region": "Talcher Coalfield",
+        "district_or_region": "Angul",
+        "state_or_region": "Odisha",
+        "site_type": "Coalfield",
+        "resource_or_function": "Coal"
+      },
+      {
+        "site_or_region": "Singrauli Coalfield",
+        "district_or_region": "Singrauli / Sonbhadra region",
+        "state_or_region": "Madhya Pradesh / Uttar Pradesh",
+        "site_type": "Coalfield",
+        "resource_or_function": "Coal"
+      },
+      {
+        "site_or_region": "Bailadila Iron Ore region",
+        "district_or_region": "Dantewada",
+        "state_or_region": "Chhattisgarh",
+        "site_type": "Mineral region",
+        "resource_or_function": "Iron ore"
+      },
+      {
+        "site_or_region": "Noamundi iron ore region",
+        "district_or_region": "West Singhbhum",
+        "state_or_region": "Jharkhand",
+        "site_type": "Mineral region",
+        "resource_or_function": "Iron ore"
+      },
+      {
+        "site_or_region": "Neyveli Lignite Mines",
+        "district_or_region": "Cuddalore",
+        "state_or_region": "Tamil Nadu",
+        "site_type": "Mine",
+        "resource_or_function": "Lignite"
+      },
+      {
+        "site_or_region": "NTPC Dadri",
+        "district_or_region": "Gautam Buddha Nagar",
+        "state_or_region": "Uttar Pradesh",
+        "site_type": "Thermal power station",
+        "resource_or_function": "Electricity generation"
+      },
+      {
+        "site_or_region": "NTPC Singrauli",
+        "district_or_region": "Sonbhadra",
+        "state_or_region": "Uttar Pradesh",
+        "site_type": "Thermal power station",
+        "resource_or_function": "Electricity generation"
+      },
+      {
+        "site_or_region": "Tarapur Atomic Power Station",
+        "district_or_region": "Palghar",
+        "state_or_region": "Maharashtra",
+        "site_type": "Nuclear power station",
+        "resource_or_function": "Electricity generation"
+      },
+      {
+        "site_or_region": "Kakrapar Atomic Power Station",
+        "district_or_region": "Tapi",
+        "state_or_region": "Gujarat",
+        "site_type": "Nuclear power station",
+        "resource_or_function": "Electricity generation"
+      },
+      {
+        "site_or_region": "Kudankulam Nuclear Power Plant",
+        "district_or_region": "Tirunelveli",
+        "state_or_region": "Tamil Nadu",
+        "site_type": "Nuclear power station",
+        "resource_or_function": "Electricity generation"
+      },
+      {
+        "site_or_region": "Kaiga Generating Station",
+        "district_or_region": "Uttara Kannada",
+        "state_or_region": "Karnataka",
+        "site_type": "Nuclear power station",
+        "resource_or_function": "Electricity generation"
+      }
+    ],
+    "visualKey": null,
+    "visualLabel": null,
+    "visualUnit": null
+  },
+  {
+    "id": "cyclone-events",
+    "category": "Climate & Hazards",
+    "title": "Selected cyclone landfall / impact events",
+    "description": "Use the selected list to introduce coastal vulnerability, cyclone tracks and different affected coastlines.",
+    "period": "Selected significant events, 2016–2024",
+    "geography": "Selected events affecting Indian coasts",
+    "unit": "Year, cyclone classification, affected region",
+    "sourceLabel": "India Meteorological Department — Regional Specialised Meteorological Centre, New Delhi",
+    "sourceUrl": "https://rsmcnewdelhi.imd.gov.in/",
+    "extraSources": [
+      {
+        "label": "IMD cyclone database / reports",
+        "url": "https://mausam.imd.gov.in/responsive/cycloneinformation.php"
+      }
+    ],
+    "caveat": "This list is illustrative and not exhaustive, so it must not be used to calculate a full ten-year cyclone frequency or vulnerability score. The named IMD category and event note are different from a measured impact score.",
+    "columns": [
+      {
+        "key": "year",
+        "label": "Year"
+      },
+      {
+        "key": "cyclone_name",
+        "label": "Cyclone"
+      },
+      {
+        "key": "imd_category",
+        "label": "IMD category"
+      },
+      {
+        "key": "coastal_state_or_region",
+        "label": "Coastal state / region"
+      },
+      {
+        "key": "event_note",
+        "label": "Event note"
+      }
+    ],
+    "rows": [
+      {
+        "year": 2016,
+        "cyclone_name": "Vardah",
+        "imd_category": "Severe Cyclonic Storm",
+        "coastal_state_or_region": "Tamil Nadu",
+        "event_note": "Landfall/major impact near Chennai coast; selected event record."
+      },
+      {
+        "year": 2019,
+        "cyclone_name": "Fani",
+        "imd_category": "Extremely Severe Cyclonic Storm",
+        "coastal_state_or_region": "Odisha",
+        "event_note": "Landfall near Puri coast; selected event record."
+      },
+      {
+        "year": 2020,
+        "cyclone_name": "Amphan",
+        "imd_category": "Super Cyclonic Storm",
+        "coastal_state_or_region": "West Bengal",
+        "event_note": "Major impacts in West Bengal and the Sundarbans region; landfall was in Bangladesh."
+      },
+      {
+        "year": 2020,
+        "cyclone_name": "Nisarga",
+        "imd_category": "Severe Cyclonic Storm",
+        "coastal_state_or_region": "Maharashtra",
+        "event_note": "Landfall near the Maharashtra coast; selected event record."
+      },
+      {
+        "year": 2021,
+        "cyclone_name": "Tauktae",
+        "imd_category": "Very Severe Cyclonic Storm",
+        "coastal_state_or_region": "Gujarat",
+        "event_note": "Crossed the Saurashtra coast; selected event record."
+      },
+      {
+        "year": 2021,
+        "cyclone_name": "Yaas",
+        "imd_category": "Very Severe Cyclonic Storm",
+        "coastal_state_or_region": "Odisha",
+        "event_note": "Crossed the north Odisha coast; selected event record."
+      },
+      {
+        "year": 2023,
+        "cyclone_name": "Biparjoy",
+        "imd_category": "Very Severe Cyclonic Storm",
+        "coastal_state_or_region": "Gujarat",
+        "event_note": "Crossed the Saurashtra/Kutch coast; selected event record."
+      },
+      {
+        "year": 2023,
+        "cyclone_name": "Michaung",
+        "imd_category": "Severe Cyclonic Storm",
+        "coastal_state_or_region": "Andhra Pradesh",
+        "event_note": "Crossed near Bapatla coast; major impacts also occurred in Tamil Nadu."
+      },
+      {
+        "year": 2024,
+        "cyclone_name": "Dana",
+        "imd_category": "Severe Cyclonic Storm",
+        "coastal_state_or_region": "Odisha",
+        "event_note": "Crossed the north Odisha coast near the Bhitarkanika/Dhamra region."
+      }
+    ],
+    "visualKey": null,
+    "visualLabel": null,
+    "visualUnit": null
+  },
+  {
+    "id": "railway-source",
+    "category": "Infrastructure & Development",
+    "title": "Railway route-kilometres — official data source",
+    "description": "Find a suitable state/UT-wise route-kilometre table from the Ministry of Railways for railway density projects.",
+    "period": "Reference source; select the reporting year in the official publication",
+    "geography": "India; coverage depends on the chosen official table",
+    "unit": "Route kilometres",
+    "sourceLabel": "Indian Railways — official portal",
+    "sourceUrl": "https://indianrailways.gov.in/",
+    "extraSources": [],
+    "caveat": "A harmonised state-wise numeric extract is not bundled here. Do not treat this resource directory row as a real measurement; open the official source and record the report year and boundary definitions before mapping.",
+    "columns": [
+      {
+        "key": "dataset",
+        "label": "Dataset"
+      },
+      {
+        "key": "coverage",
+        "label": "Coverage"
+      },
+      {
+        "key": "unit",
+        "label": "Unit"
+      },
+      {
+        "key": "reference_period",
+        "label": "Reference period"
+      },
+      {
+        "key": "availability",
+        "label": "Availability"
+      },
+      {
+        "key": "source",
+        "label": "Publisher"
+      }
+    ],
+    "rows": [
+      {
+        "dataset": "State-wise railway route kilometres",
+        "coverage": "India; state/UT breakdown where provided in official railway publications",
+        "unit": "Route kilometres",
+        "reference_period": "Use the year shown in the selected official report",
+        "availability": "Official reference link; numeric table not bundled in this version",
+        "source": "Indian Railways / Ministry of Railways"
+      }
+    ],
+    "visualKey": null,
+    "visualLabel": null,
+    "visualUnit": null
+  },
+  {
+    "id": "official-source-directory",
+    "category": "Infrastructure & Development",
+    "title": "More official dataset portals",
+    "description": "Use these official portals to download updated or more detailed tables for your project; this directory is a set of resources rather than new measured data.",
+    "period": "Current portal references checked October 2026",
+    "geography": "India",
+    "unit": "Varies by resource",
+    "sourceLabel": "Government of India data portals",
+    "sourceUrl": "https://data.desagri.gov.in/website/crops-apy-report-web",
+    "extraSources": [],
+    "caveat": "This is a resource directory, not a numeric dataset. Always record the publication year, geographic boundaries and units of downloaded data.",
+    "columns": [
+      {
+        "key": "dataset",
+        "label": "Dataset / portal"
+      },
+      {
+        "key": "coverage",
+        "label": "Coverage"
+      },
+      {
+        "key": "unit",
+        "label": "Unit"
+      },
+      {
+        "key": "reference_period",
+        "label": "Reference period"
+      },
+      {
+        "key": "availability",
+        "label": "Availability"
+      },
+      {
+        "key": "source",
+        "label": "Publisher"
+      },
+      {
+        "key": "url",
+        "label": "Open dataset"
+      }
+    ],
+    "rows": [
+      {
+        "dataset": "Crop area, production and yield query",
+        "coverage": "State and district selectors; crop and season selectable",
+        "unit": "Area, production, yield",
+        "reference_period": "Choose year range on portal",
+        "availability": "Interactive official query and downloadable report",
+        "source": "Directorate of Economics & Statistics, DA&FW",
+        "url": "https://data.desagri.gov.in/website/crops-apy-report-web"
+      },
+      {
+        "dataset": "Road length by state/UT",
+        "coverage": "State/UT and road category",
+        "unit": "Kilometres",
+        "reference_period": "Basic Road Statistics report; confirm issue year",
+        "availability": "Official Ministry of Road Transport & Highways report",
+        "source": "MoRTH",
+        "url": "https://morth.nic.in/sites/default/files/Basic%20Road%20Statistics%20of%20India-2019-20.pdf"
+      },
+      {
+        "dataset": "Cyclone landfall catalogue and reports",
+        "coverage": "North Indian Ocean / Indian coast events",
+        "unit": "Event records and tracks",
+        "reference_period": "Select the event year/report",
+        "availability": "Official IMD reports and cyclone e-atlas",
+        "source": "India Meteorological Department",
+        "url": "https://rsmcnewdelhi.imd.gov.in/"
+      },
+      {
+        "dataset": "State-wise installed electricity capacity",
+        "coverage": "State/UT and region tables",
+        "unit": "Megawatts",
+        "reference_period": "General Review 2024; Table 3.3 for 31 March 2022 and 2023",
+        "availability": "Official capacity data and reports",
+        "source": "Central Electricity Authority",
+        "url": "https://cea.nic.in/reports/external/daily-generation?lang=en"
+      }
+    ],
+    "visualKey": null,
+    "visualLabel": null,
+    "visualUnit": null
+  }
+]
